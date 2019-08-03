@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="柚子的技术博客">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="zhufree">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Android 6.0适配权限申请">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="柚子的技术博客">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="柚子的树">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>Android 6.0适配权限申请 - 柚子的树</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/08/03/Android 6.0适配权限申请/">
+                Android 6.0适配权限申请
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>在Android 6.0 (API 23) 发布之前, 所有的权限都在安装应用的时候显示给用户（在清单文件中声明），用户确认安装则表示全部接受这些权限, 之后无法撤销对这些权限的授权.<br>Android 6.0开始, 一部分比较危险的权限需要在程序运行时显式弹框，显式请求用户授权。什么时候弹这个框,由应用程序自己决定.<br>对于其他认为不是很危险的权限，仍然保持原来的做法，在用户安装应用程序时就予以授权。<br>同时在设置中，对于应用的危险权限，用户可以选择性地进行授权或者关闭。</p>
+<h2 id="Permission介绍"><a href="#Permission介绍" class="headerlink" title="Permission介绍"></a>Permission介绍</h2><p><a href="https://developer.android.com/guide/topics/security/permissions.html" target="_blank" rel="noopener">官方文档-系统权限</a><br>所有需要使用的权限都需要在清单文件中声明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    package=&quot;com.android.app.myapp&quot; &gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.RECEIVE_SMS&quot; /&gt;</span><br><span class="line">    ...</span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果您的应用在其清单中列出正常权限（即，不会对用户隐私或设备操作造成很大风险的权限），系统会自动授予这些权限。如果您的应用在其清单中列出危险权限（即，可能影响用户隐私或设备正常操作的权限），系统会要求用户明确授予这些权限。<br>Android 发出请求的方式取决于系统版本，而系统版本是应用的目标：</p>
+<ul>
+<li>如果设备运行的是 <strong>Android 6.0（API 级别 23）</strong>或更高版本，并且应用的 <strong>targetSdkVersion 是 23 或更高</strong>版本，则应用在运行时向用户请求权限。用户可随时调用权限，因此应用在每次运行时均需检查自身是否具备所需的权限。如需了解有关在应用中请求权限的详细信息，请参阅使用系统权限培训指南。</li>
+<li>如果设备运行的是 <strong>Android 5.1（API 级别 22）</strong>或更低版本，并且应用的 <strong>targetSdkVersion 是 22 或更低</strong>版本，则系统会在用户安装应用时要求用户授予权限。如果将新权限添加到更新的应用版本，系统会在用户更新应用时要求授予该权限。用户一旦安装应用，他们撤销权限的唯一方式是卸载应用。</li>
+</ul>
+<p>因此有些app可以通过设置targetSDK为22以下来一次性获取很多权限。</p>
+<h3 id="权限等级"><a href="#权限等级" class="headerlink" title="权限等级"></a>权限等级</h3><p>系统权限分为几个保护级别。需要了解的两个最重要保护级别是正常权限和危险权限：</p>
+<ul>
+<li>正常权限涵盖应用需要访问其沙盒外部数据或资源，但对用户隐私或其他应用操作风险很小的区域。例如，设置时区的权限就是正常权限。如果应用声明其需要正常权限，系统会自动向应用授予该权限。如需当前正常权限的完整列表，请参阅<a href="https://developer.android.com/guide/topics/security/normal-permissions.html" target="_blank" rel="noopener">正常权限</a>。</li>
+<li>危险权限涵盖应用需要涉及用户隐私信息的数据或资源，或者可能对用户存储的数据或其他应用的操作产生影响的区域。例如，能够读取用户的联系人属于危险权限。如果应用声明其需要危险权限，则用户必须明确向应用授予该权限。</li>
+</ul>
+<h3 id="权限组"><a href="#权限组" class="headerlink" title="权限组"></a>权限组</h3><p>所有危险的 Android 系统权限都属于权限组。如果设备运行的是 Android 6.0（API 级别 23），并且应用的 <code>targetSdkVersion</code> 是 23 或更高版本，则当用户请求危险权限时系统会发生以下行为：</p>
+<ul>
+<li>如果应用请求其清单中列出的危险权限，而应用目前在权限组中没有任何权限，则系统会向用户显示一个对话框，描述应用要访问的权限组，系统只告诉用户应用需要的权限组，而不告知具体权限。例如，如果应用请求 <code>READ_CONTACTS</code> 权限，系统对话框只说明该应用需要访问设备的联系信息。如果用户批准，系统将向应用授予其请求的权限。</li>
+<li>如果应用请求其清单中列出的危险权限，而应用在同一权限组中已有另一项危险权限，则系统会立即授予该权限，而无需与用户进行任何交互。例如，如果某应用已经请求并且被授予了 <code>READ_CONTACTS</code> 权限，然后它又请求 <code>WRITE_CONTACTS</code>，系统将立即授予该权限。</li>
+</ul>
+<p>即用户同意权限组中的任意一个权限等同于同意整个权限组。</p>
+<p>危险权限和权限组列表：</p>
+<img src="/2019/08/03/Android%206.0适配权限申请/1555396640039.png">
+<p><a href="https://developer.android.com/reference/android/Manifest.permission.html" target="_blank" rel="noopener">权限列表</a></p>
+<h2 id="动态申请权限"><a href="#动态申请权限" class="headerlink" title="动态申请权限"></a>动态申请权限</h2><p><a href="https://developer.android.com/training/permissions/requesting" target="_blank" rel="noopener">官方文档-申请权限教程</a></p>
+<p>动态申请权限的大致步骤为：判断当前是否拥有该权限-&gt;如果没有则向用户申请权限-&gt;在<code>onRequestPermissionsResult()</code>方法中接收用户是否授予了权限，并进行相应操作。</p>
+<p>检查是否拥有权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// Assume thisActivity is the current activity</span><br><span class="line">int permissionCheck = ContextCompat.checkSelfPermission(thisActivity,</span><br><span class="line">        Manifest.permission.WRITE_CALENDAR);</span><br></pre></td></tr></table></figure>
+
+<p>对于拥有或没有权限做出不同的反应：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// Here, thisActivity is the current activity</span><br><span class="line">if (ContextCompat.checkSelfPermission(thisActivity,</span><br><span class="line">                Manifest.permission.READ_CONTACTS)</span><br><span class="line">        != PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line"></span><br><span class="line">    // Should we show an explanation?</span><br><span class="line">    if (ActivityCompat.shouldShowRequestPermissionRationale(thisActivity,</span><br><span class="line">            Manifest.permission.READ_CONTACTS)) &#123;</span><br><span class="line"></span><br><span class="line">        // Show an expanation to the user *asynchronously* -- don&apos;t block</span><br><span class="line">        // this thread waiting for the user&apos;s response! After the user</span><br><span class="line">        // sees the explanation, try again to request the permission.</span><br><span class="line"></span><br><span class="line">    &#125; else &#123;</span><br><span class="line"></span><br><span class="line">        // No explanation needed, we can request the permission.</span><br><span class="line"></span><br><span class="line">        ActivityCompat.requestPermissions(thisActivity,</span><br><span class="line">                new String[]&#123;Manifest.permission.READ_CONTACTS&#125;,</span><br><span class="line">                MY_PERMISSIONS_REQUEST_READ_CONTACTS);</span><br><span class="line"></span><br><span class="line">        // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an</span><br><span class="line">        // app-defined int constant. The callback method gets the</span><br><span class="line">        // result of the request.</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>onRequestPermissionsResult</code>中接收用户请求的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onRequestPermissionsResult(int requestCode,</span><br><span class="line">        String permissions[], int[] grantResults) &#123;</span><br><span class="line">    switch (requestCode) &#123;</span><br><span class="line">        case MY_PERMISSIONS_REQUEST_READ_CONTACTS: &#123;</span><br><span class="line">            // If request is cancelled, the result arrays are empty.</span><br><span class="line">            if (grantResults.length &gt; 0</span><br><span class="line">                &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line"></span><br><span class="line">                // permission was granted, yay! Do the</span><br><span class="line">                // contacts-related task you need to do.</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line"></span><br><span class="line">                // permission denied, boo! Disable the</span><br><span class="line">                // functionality that depends on this permission.</span><br><span class="line">            &#125;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // other &apos;case&apos; lines to check for other</span><br><span class="line">        // permissions this app might request</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="EasyPermission封装使用"><a href="#EasyPermission封装使用" class="headerlink" title="EasyPermission封装使用"></a>EasyPermission封装使用</h2><p>引入依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    // For developers using AndroidX in their applications</span><br><span class="line">    implementation &apos;pub.devrel:easypermissions:3.0.0&apos;</span><br><span class="line"> </span><br><span class="line">    // For developers using the Android Support Library</span><br><span class="line">    implementation &apos;pub.devrel:easypermissions:2.0.1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>申请权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@AfterPermissionGranted(RC_CAMERA_AND_LOCATION)</span><br><span class="line">private void methodRequiresTwoPermission() &#123;</span><br><span class="line">    String[] perms = &#123;Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION&#125;;</span><br><span class="line">    if (EasyPermissions.hasPermissions(this, perms)) &#123;</span><br><span class="line">        // Already have permission, do the thing</span><br><span class="line">        // ...</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // Do not have permissions, request them now</span><br><span class="line">        EasyPermissions.requestPermissions(this, getString(R.string.camera_and_location_rationale),</span><br><span class="line">                RC_CAMERA_AND_LOCATION, perms);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接收回调方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</span><br><span class="line">    super.onRequestPermissionsResult(requestCode, permissions, grantResults);</span><br><span class="line"></span><br><span class="line">    // Forward results to EasyPermissions</span><br><span class="line">    EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>activity需要实现<code>EasyPermissions.PermissionCallbacks</code>接口，然后实现接口方法处理授予权限和拒绝权限的情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onPermissionsGranted(int requestCode, List&lt;String&gt; list) &#123;</span><br><span class="line">    // Some permissions have been granted</span><br><span class="line">    // ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onPermissionsDenied(int requestCode, List&lt;String&gt; list) &#123;</span><br><span class="line">    // Some permissions have been denied</span><br><span class="line">    // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/android/">#android</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（布局篇）/">简单项目实战flutter（布局篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（功能篇）/">简单项目实战flutter（功能篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android 6.0适配权限申请/">Android 6.0适配权限申请</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android Template学习笔记/">Android Template学习笔记</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/编程/">编程</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

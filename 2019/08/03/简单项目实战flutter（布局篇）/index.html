@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="柚子的技术博客">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="zhufree">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="简单项目实战flutter（布局篇）">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="柚子的技术博客">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="柚子的树">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>简单项目实战flutter（布局篇） - 柚子的树</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/08/03/简单项目实战flutter（布局篇）/">
+                简单项目实战flutter（布局篇）
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>这是一个在撸完两个官方Demo之后，为了实践操作重写了原来app的项目。<br>虽然这个app基本上只有一个页面，算不上复杂但可以说内容丰富，涉及到的常用功能也不少，在花了三天假期的两天撸完大部分内容之后，感觉还是学到了不少知识点，在此做一些总结归纳，避免过几天忘记了。</p>
+<p>项目地址：<a href="https://github.com/zhufree/friday_today" target="_blank" rel="noopener">https://github.com/zhufree/friday_today</a><br>因为整体还没完全完成，主体代码就没有分几个文件，都放在 <a href="https://github.com/zhufree/friday_today/blob/master/lib/main.dart" target="_blank" rel="noopener">https://github.com/zhufree/friday_today/blob/master/lib/main.dart</a> ，一共800多行</p>
+<p>这里是原来的原生代码，全部用kotlin写的，也是基本上都在一个Activity里面：<br><a href="https://github.com/zhufree/Fraiday-Android/blob/master/app/src/main/java/info/free/duangjike/friday/FridayActivity.kt" target="_blank" rel="noopener">https://github.com/zhufree/Fraiday-Android/blob/master/app/src/main/java/info/free/duangjike/friday/FridayActivity.kt</a></p>
+<p>放两张截图对比，上面是flutter版本，下面是原生Android版本：</p>
+<img src="/2019/08/03/简单项目实战flutter（布局篇）/9675704E1EC0B381C85BD9AC71EB0253.jpg">
+<img src="/2019/08/03/简单项目实战flutter（布局篇）/FFB61CDE8564B6FD617852B3E9597B11.jpg">
+
+<p>总体来说Flutter的布局方式是和ReactNative类似的，State来控制状态，以及Flex布局之类。<br>flutter里面的描述控件的是widget，描述布局的也是widget，于是不得不面临重重嵌套，写布局时十分怀念方便的ConstraintLayout，不过写多了之后发现这种布局方式有一个好处：就是非常容易写一个方法返回一个通用widget，然后只需要调用方法就可以重复构建类似的布局，虽然在android可以用include标签（只能重用布局），也可以用自定义布局（需要新建类比较麻烦），但都不如flutter这样直接用一个方法封装来的方便快捷。</p>
+<p>接下来从根布局捋一捋用到的widget和一些踩到的坑：</p>
+<h2 id="根布局：Stack，Position和AspectRatio"><a href="#根布局：Stack，Position和AspectRatio" class="headerlink" title="根布局：Stack，Position和AspectRatio"></a>根布局：Stack，Position和AspectRatio</h2><p>app的界面主要分为两部分，用于展示的界面（包括背景和文字），和用于控制的界面（即图上的黑色半透明有一堆按钮的部分），其中展示部分有占全屏幕和缩减为正方形两种模式，因此不论如何这两个部分肯定是重叠的，我用两个方法分别构建这两部分的组件，然后使用Stack来放置这两个部分（最外层这个body是Scaffold的内容）：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">body: Stack(</span><br><span class="line"> alignment: Alignment.bottomCenter,</span><br><span class="line">  children: &lt;Widget&gt;[</span><br><span class="line">  <span class="comment">// 展示部分需要整体居中</span></span><br><span class="line">    Center(</span><br><span class="line">    <span class="comment">// 套的这层RepaintBoundary是用来截屏的，后面再说</span></span><br><span class="line">      child: RepaintBoundary(</span><br><span class="line">        key: screenKey,</span><br><span class="line">        child: screenType == <span class="number">1</span></span><br><span class="line">	        <span class="comment">// 宽高一比一的情况</span></span><br><span class="line">            ? AspectRatio(</span><br><span class="line">                aspectRatio: <span class="number">1</span> / <span class="number">1</span>,</span><br><span class="line">                child: Container(</span><br><span class="line">                  color: bgColor,</span><br><span class="line">                  child: _buildShowContent(),</span><br><span class="line">                ),</span><br><span class="line">              )</span><br><span class="line">             <span class="comment">// 占全屏幕的情况</span></span><br><span class="line">            : Container(</span><br><span class="line">                color: bgColor,</span><br><span class="line">                child: _buildShowContent(),</span><br><span class="line">              ),</span><br><span class="line">      ),</span><br><span class="line">    ),</span><br><span class="line">    _buildControlPanel(),</span><br><span class="line">  ],</span><br><span class="line">));</span><br></pre></td></tr></table></figure>
+
+<p>最初我以为在子布局中设置alignment为botton就可以把<code>controlPanel</code>部分固定在底部，但实际并没有效果，这块内容飞到了顶上，半透明背景也没有出现，推测是<code>controlPanel</code>的内容占满了屏幕高度，就算是固定在底部也看不出来。所以解决方式是在<code>controlPanel</code>中给<code>Column</code>添加纵轴上的最大值<code>mainAxisSize: MainAxisSize.min</code>（参见<code>_buildControlPanel()</code>方法的代码）。在最初瞎几把乱试的时候误打误撞发现了一个可以达成相同效果的方式，就是使用<code>Pisitioned</code>来固定。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 使用Positioned把这部分固定在底部，然后left和right为0使布局撑开达到宽度match_parent的效果</span><br><span class="line">Positioned(</span><br><span class="line">  bottom: 0,</span><br><span class="line">  left: 0,</span><br><span class="line">  right: 0,</span><br><span class="line">  child: _buildControlPanel(),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>AspectRatio</code>的作用是使子布局宽高限制为固定宽高比，属性的作用都很显而易见，就不赘述了。</p>
+<h2 id="文字展示部分，Column，BoxDecoration"><a href="#文字展示部分，Column，BoxDecoration" class="headerlink" title="文字展示部分，Column，BoxDecoration"></a>文字展示部分，Column，BoxDecoration</h2><p>展示的部分布局很简单，就是从上到下摆上几个文字，用<code>Column</code>就可以实现，给<code>Column</code>设置在主轴上居中。flutter不像android所有<code>View</code>都可以设置<code>margin</code>和<code>padding</code>，而是要在外面套上<code>Container</code>，然后给<code>Container</code>设置设置各种属性来修饰。<br><code>BoxDecoration</code>则可以很方便的给<code>Container</code>的子元素设置背景色，圆角，边框，阴影等效果，让我觉得比较实用的就是对于<code>Button</code>类有一个现成的半圆圆角方法，在android里实现一般需要确定高度，不然就只能等渲染完了再按照高度的一半设置圆角。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制中间显示的部分</span><br><span class="line">_buildShowContent() &#123;</span><br><span class="line">  return Column(</span><br><span class="line">        mainAxisAlignment: MainAxisAlignment.center, // 子布局在横轴上居中</span><br><span class="line">        children: &lt;Widget&gt;[</span><br><span class="line">          Container(</span><br><span class="line">            margin: EdgeInsets.only(bottom: 20.0),</span><br><span class="line">//              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),</span><br><span class="line">            height: 60.0,</span><br><span class="line">            // 不是按钮没有现成的半圆方法，设置固定高度再加圆角</span><br><span class="line">            decoration: BoxDecoration(</span><br><span class="line">              color: bubbleColor, // 设置气泡（文字的背景）颜色</span><br><span class="line">              borderRadius: BorderRadius.circular(30.0),</span><br><span class="line">            ),</span><br><span class="line">            child: Center(// 使文字整体居中</span><br><span class="line">              widthFactor: 1.3, // 宽度是文字宽度的1.3倍</span><br><span class="line">              child: Text(</span><br><span class="line">                langType == 0 ? &quot;今天是周五吗？&quot; : &quot;Is today Friday?&quot;,</span><br><span class="line">                style: TextStyle(</span><br><span class="line">                    fontSize: 25, color: textColor, fontFamily: fontName),</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">          Text(</span><br><span class="line">            today.weekday == 5</span><br><span class="line">                ? langType == 1 ? &quot;YES!&quot; : &quot;是&quot;</span><br><span class="line">                : langType == 1 ? &quot;NO&quot; : &quot;不是&quot;,</span><br><span class="line">            style:</span><br><span class="line">                TextStyle(fontSize: 90, color: textColor, fontFamily: fontName),</span><br><span class="line">          ),</span><br><span class="line">          Container(</span><br><span class="line">            margin: EdgeInsets.only(top: 20.0),</span><br><span class="line">            child: Text(</span><br><span class="line">              &quot;$&#123;weekdayToString(today.weekday)&#125; $&#123;today.year&#125;.$&#123;today.month&#125;.$&#123;today.day&#125;&quot;,</span><br><span class="line">              textAlign: TextAlign.center,</span><br><span class="line">              style: TextStyle(color: textColor, fontFamily: fontName),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第一行文字有一个白色圆角背景作为气泡，文字要在气泡中居中，在android里我使用<code>gravity=center</code>，然后设置好<code>padding</code>，最后根据渲染完之后文字的整个高度来设置圆角，但在这里我固定了背景高度，由于无法知道文字的确切高度就不能用设置padding 的方法使文字居中了，解决方案是使用了一个<code>Center</code>包裹Text，宽度则由<code>widthFactor</code>设置为文字宽度的倍数，flutter里面用倍数设置宽度的操作让我觉得很奇怪。</p>
+<h2 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h2><p>控制面板由各种按钮组成，整体是一个<code>Column</code>从上到下一共7行，各行用<code>Row</code>来排布按钮，是比较规律的排列方式，因为按钮有很多相似性，此处用了好几个方法来封装不同的按钮：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制整个控制面板</span><br><span class="line">_buildControlPanel() &#123;</span><br><span class="line">  return Container(</span><br><span class="line">    padding: EdgeInsets.all(12.0),</span><br><span class="line">    color: Color.fromARGB(30, 0, 0, 0), // 半透明的黑色背景</span><br><span class="line">    child: Column(</span><br><span class="line">      crossAxisAlignment: CrossAxisAlignment.start, // 子布局在横轴上左对齐</span><br><span class="line">      mainAxisSize: MainAxisSize.min, // 高度保持最小高度以固定在底部</span><br><span class="line">      children: &lt;Widget&gt;[</span><br><span class="line">        // 前三行分别是背景，气泡和文字的颜色控制，用一个方法封装</span><br><span class="line">        _buildColorController(0),</span><br><span class="line">        _buildColorController(1),</span><br><span class="line">        _buildColorController(2),</span><br><span class="line">        // 展示可选择的字体</span><br><span class="line">        Container(</span><br><span class="line">          height: 30.0,</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          // 中文字体只有4个但是英文有11个，需要滚动，所以使用ListView而不是Row</span><br><span class="line">          child: new ListView(</span><br><span class="line">            padding: EdgeInsets.all(0.0),</span><br><span class="line">            scrollDirection: Axis.horizontal, // 设置横向滚动</span><br><span class="line">            children: _buildFontRow(langType), // 根据字体种类生成切换字体的按钮组</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        Container(</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          child: Row(</span><br><span class="line">            // 一行四个按钮，用通用的方法生成，点击事件也从外部传入</span><br><span class="line">            mainAxisAlignment: MainAxisAlignment.start,</span><br><span class="line">            children: &lt;Widget&gt;[</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).square,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; setState(() &#123;</span><br><span class="line">                        screenType = 1;</span><br><span class="line">                      &#125;)),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).full,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; setState(() &#123;</span><br><span class="line">                        screenType = 0;</span><br><span class="line">                      &#125;)),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleCn,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; &#123;_changeLangType(0)&#125;),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleEn,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; &#123;_changeLangType(1)&#125;),</span><br><span class="line">            ],</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        // 四个功能按钮是2X2，用两个row</span><br><span class="line">        Container(</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          child: Row(</span><br><span class="line">            children: &lt;Widget&gt;[</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).wallpaper,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                        color: FridayColors.jikeWhite, fontSize: 14.0),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  () =&gt; &#123;_capturePng(1)&#125;),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleShare,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                      color: FridayColors.jikeWhite,</span><br><span class="line">                      fontSize: 14.0,</span><br><span class="line">                    ),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  () =&gt; &#123;_capturePng(2)&#125;),</span><br><span class="line">            ],</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        Container(</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          child: Row(</span><br><span class="line">            children: &lt;Widget&gt;[</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).group,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                        color: FridayColors.jikeWhite, fontSize: 14.0),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  _toJike),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleSave,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                      color: FridayColors.jikeWhite,</span><br><span class="line">                      fontSize: 14.0,</span><br><span class="line">                    ),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  () =&gt; &#123;_capturePng(0)&#125;),</span><br><span class="line">            ],</span><br><span class="line">          ),</span><br><span class="line">        )</span><br><span class="line">      ],</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="行：Expanded，Button"><a href="#行：Expanded，Button" class="headerlink" title="行：Expanded，Button"></a>行：Expanded，Button</h3><p>接下来绘制头三行，因为是一样的格式，封装在下面这个方法里：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制切换颜色的三行 [type]背景/气泡/字体</span><br><span class="line">_buildColorController(int type) &#123;</span><br><span class="line">  return Container(</span><br><span class="line">    margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">    child: Row(</span><br><span class="line">      mainAxisAlignment: MainAxisAlignment.start,  // 主轴上从左到右</span><br><span class="line">      mainAxisSize: MainAxisSize.max, // 宽度占满</span><br><span class="line">      children: &lt;Widget&gt;[</span><br><span class="line">        Text(</span><br><span class="line">          getTitleByType(type, context), // 标题由type获取</span><br><span class="line">          style: TextStyle(</span><br><span class="line">            fontSize: 12.0,</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        // 生成颜色按钮</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeWhite),</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeYellow),</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeBlue),</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeBlack),</span><br><span class="line">        // Expanded占满剩余宽度</span><br><span class="line">        Expanded(</span><br><span class="line">          child: Container(</span><br><span class="line">            height: 30.0,</span><br><span class="line">            padding: EdgeInsets.all(2.0), // 这个padding用于挤压缩小按钮本身</span><br><span class="line">            margin: EdgeInsets.only(left: 8.0),</span><br><span class="line">            child: RaisedButton(// 有凸起阴影效果的按钮</span><br><span class="line">              child: Text(</span><br><span class="line">                FridayLocalizations.of(context).moreColor,</span><br><span class="line">                style: TextStyle(fontSize: 12.0, color: Colors.white),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () =&gt; &#123;_showPickColorDialog(type)&#125;,</span><br><span class="line">              color: Colors.black26,</span><br><span class="line">              shape: StadiumBorder(), // 半圆形背景</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        Expanded(</span><br><span class="line">          child: Container(</span><br><span class="line">            height: 30.0,</span><br><span class="line">            padding: EdgeInsets.all(2.0),</span><br><span class="line">            margin: EdgeInsets.only(left: 8.0),</span><br><span class="line">            child: RaisedButton(</span><br><span class="line">              padding: EdgeInsets.all(0.0),</span><br><span class="line">              child: Text(</span><br><span class="line">                FridayLocalizations.of(context).customColor,</span><br><span class="line">                style: TextStyle(fontSize: 12.0, color: Colors.white),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () =&gt; &#123;_showCustomColorDialog(type)&#125;,</span><br><span class="line">              color: Colors.black26,</span><br><span class="line">              shape: StadiumBorder(),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">      ],</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最主要用到的空间就是<code>RaisedButton</code>，是有凸起阴影效果的按钮，如果要没有立体效果的可以使用<code>FlatButton</code>，<code>shape: StadiumBorder()</code>可以方便地使按钮有半圆形效果，这里顺便放出三个颜色按钮的生成方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制点击切换颜色的小圆点</span><br><span class="line">_buildColorClickDot(int type, Color color) &#123;</span><br><span class="line">  return Container(</span><br><span class="line">    margin: EdgeInsets.only(left: 8.0),</span><br><span class="line">    child: Container(</span><br><span class="line">      // 限制按钮的宽度</span><br><span class="line">      width: 20.0,</span><br><span class="line">      height: 20.0,</span><br><span class="line">      child: RaisedButton(</span><br><span class="line">//          onPressed: _changeColor(type, color), // 这样写颜色出不来</span><br><span class="line">        onPressed: () =&gt; &#123;_changeColor(type, color)&#125;,</span><br><span class="line">        color: color,</span><br><span class="line">        // 设置为圆形按钮，如果不添加这个shape就是20*20的正方形</span><br><span class="line">        // 因为宽高一样，半圆和圆的结果是一样的，所以用shape: StadiumBorder()也ok</span><br><span class="line">        shape: CircleBorder(</span><br><span class="line">            side: BorderSide(</span><br><span class="line">          color: Colors.transparent,</span><br><span class="line">          width: 0,</span><br><span class="line">        )),</span><br><span class="line">      ),</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一开始我想像原生那样用一个有颜色的View设置一个点击事件就完事了，但是Flutter里面不是啥都可以点击的，如果不是<code>Button</code>类的<code>widget</code>，需要套一个<code>GestureDetector</code>的<code>widget</code>来添加点击事件（后面会用到），所以还是直接用了<code>Button</code>，立体效果看起来感觉比原来好一点。使用<code>Button</code>的时候起初感觉很麻烦的就是它有一些自带的<code>padding</code>等等，导致尺寸很不好控制，最后发现只要在在外面套上<code>Container</code>设置宽高就可以了，智障如我。</p>
+<p>一行最后两个文字按钮，本来也是总有<code>padding</code>导致文字放不下，甚至按钮本身超出屏幕，最后设置了<code>Expanded</code>来使它们的宽度自适应，但是这样在小屏上文字可能真的放不下，于是把文字减了字数→_→</p>
+<p>其他行也都是类似的结构，就不重复提了。</p>
+<h2 id="弹出部分：AlertDialog"><a href="#弹出部分：AlertDialog" class="headerlink" title="弹出部分：AlertDialog"></a>弹出部分：AlertDialog</h2><p>选更多颜色和自定义颜色时都会弹出<code>dialog</code>，flutter有现成的<code>Dialog</code>类型控件，一般使用<code>SimpleDialog</code>显示一个多行选项列表，<code>AlertDialog</code>显示自定义的内容，并在最下面有几个按钮。<br>flutter有一个自带的<code>showDialog</code>方法，接收一些参数，并使用一个<code>builder</code>来生成<code>Dialog</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/// 显示自定义颜色的dialog</span><br><span class="line">Future&lt;void&gt; _showCustomColorDialog(int type) async &#123;</span><br><span class="line">  return showDialog&lt;void&gt;(</span><br><span class="line">    context: context,</span><br><span class="line">    barrierDismissible: false, // user must tap button!</span><br><span class="line">    builder: (BuildContext context) &#123;</span><br><span class="line">      return AlertDialog(</span><br><span class="line">        contentPadding: EdgeInsets.all(16.0),</span><br><span class="line">        title: Text(getCustomColorTitleByType(type, context)),</span><br><span class="line">        content: ..., // 内容widget</span><br><span class="line">        actions: &lt;Widget&gt;[</span><br><span class="line">          FlatButton(</span><br><span class="line">            child: Text(&apos;OK&apos;),</span><br><span class="line">            onPressed: () &#123;</span><br><span class="line">              _handleSubmitted(type, _inputController.text);</span><br><span class="line">              Navigator.of(context).pop();</span><br><span class="line">            &#125;,</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      );</span><br><span class="line">    &#125;,</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以下是<code>dialog</code>的<code>content</code>部分内容：</p>
+<h3 id="可滑动Widget：GridView，SingleChildScrollView，Wrap"><a href="#可滑动Widget：GridView，SingleChildScrollView，Wrap" class="headerlink" title="可滑动Widget：GridView，SingleChildScrollView，Wrap"></a>可滑动Widget：GridView，SingleChildScrollView，Wrap</h3><p>其中一个Dialog需要展示500多个颜色列表，最初我使用了一个可滑动的<code>SingleChildScrollViewcontent</code>，其中放了500多个按钮，用的是从左往右一行一行的排列，用Wrap比ListView更合适</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">content: SingleChildScrollView(// 可滑动</span><br><span class="line">  child: Center( // 设置居中避免两侧空白不对称</span><br><span class="line">    child: Wrap(</span><br><span class="line">      spacing: 5.0,</span><br><span class="line">      runSpacing: 5.0,</span><br><span class="line">      children: getColorRows(type),</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+<p>但是在我看了一下SingleChildScrollView的源码之后，里面推荐了一堆别的控件，Flutter提供的控件太多了令人困惑，经过几次尝试，最终发现使用<code>GridView.count</code>可以完美实现，用法和Wrap很相似：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">content: GridView.count(</span><br><span class="line">  crossAxisCount: 8, // 一行的按钮个数</span><br><span class="line">  crossAxisSpacing: 5.0, //列间距</span><br><span class="line">  mainAxisSpacing: 5.0, // 行间距</span><br><span class="line">  children: getColorRows(type),</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入与提示：TextField，Snackbar"><a href="#输入与提示：TextField，Snackbar" class="headerlink" title="输入与提示：TextField，Snackbar"></a>输入与提示：TextField，Snackbar</h3><p>另一个<code>Dialog</code>则弹出文本输入框供输入六位或者八位颜色值，这里涉及到文本输入与控制，在官方Demo中有现成的例子，所以就直接拿来用了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">final TextEditingController _inputController = new TextEditingController();</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">content: TextField(</span><br><span class="line">  controller: _inputController,</span><br><span class="line">  decoration: InputDecoration(</span><br><span class="line">      hintText: FridayLocalizations.of(context).hintInputColor,</span><br><span class="line">      hintStyle: TextStyle(fontSize: 12.0)),</span><br><span class="line">),</span><br><span class="line">actions: &lt;Widget&gt;[</span><br><span class="line">  FlatButton(</span><br><span class="line">    child: Text(&apos;OK&apos;),</span><br><span class="line">    onPressed: () &#123;</span><br><span class="line">      _handleSubmitted(type, _inputController.text); // 点击ok时提交</span><br><span class="line">      Navigator.of(context).pop(); // dialog隐藏</span><br><span class="line">    &#125;,</span><br><span class="line">  ),</span><br><span class="line">],</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">void _handleSubmitted(int type, String text) &#123;</span><br><span class="line"> _inputController.clear(); // 清除输入的文字</span><br><span class="line">  if (text.length != 8 &amp;&amp; text.length != 6) &#123;</span><br><span class="line">    // 输入的格式不正确，弹出提示</span><br><span class="line">    (scaffoldKey.currentState as ScaffoldState).showSnackBar(new SnackBar(</span><br><span class="line">      content: new Text(FridayLocalizations.of(context).noticeWrongInput),</span><br><span class="line">    ));</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 设置颜色</span><br><span class="line">    _changeColor(</span><br><span class="line">        type, Color(int.parse(text.length == 8 ? &quot;0x$text&quot; : &quot;0xFF$text&quot;)));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里用到了一个<code>showSnackBar</code>来显示SnackBar，有一个小坑，我先开始用网上搜索到的<code>Scaffold.of(context).showSnackBar(snackBar);</code>来显示，结果一直报<code>Scaffold.of() called with a context that does not contain a Scaffold.</code>这个错，由于对flutter的<code>context</code>不够了解，在查阅了一些资料后大致知道要把什么<code>widget</code>拆出来，这样就能通过<code>context</code>找到了（参考<a href="https://juejin.im/post/5c665cb651882562914ec153" target="_blank" rel="noopener">这篇文章</a>），但是我并不想为了显示一个<code>snackBar</code>这么做，最后找到了另一个解决办法，<code>Scaffold.of(context)</code>是为了获取一个<code>ScaffoldState</code>，所以可以在<code>Scaffold</code>上添加一个<code>key</code>，再用这个<code>key</code>拿到<code>state</code>来调用方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">GlobalKey&lt;ScaffoldState&gt; scaffoldKey = GlobalKey();</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">@override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return Scaffold(</span><br><span class="line">        key: scaffoldKey,</span><br><span class="line">        body: ...</span><br><span class="line">        );</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">scaffoldKey.currentState.showSnackBar(new SnackBar(</span><br><span class="line">      content: new Text(FridayLocalizations.of(context).noticeWrongInput),</span><br><span class="line">    ));</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>整个页面的大致内容就是如此，原本我打算整出来就完事， 但在写这篇总结的时候也为了探索是不是有别的实现方式做了一些尝试，最终也进行了一些优化。<br>其实作为一个习惯了原生的Android开发者，很多时候都会困惑于原生很容易实现的效果放到Flutter中使用widget要怎么写，比如如何实现<code>WRAP_COTENT</code>和<code>MATCH_PARENT</code>（可以参考<a href="https://www.jianshu.com/p/7511cb18a05e" target="_blank" rel="noopener">这篇文章</a>）等等，正是因为如此，我认为需要写更多的布局才能逐渐习惯Flutter的代码风格。<br>下一篇文章（如果有的话）会描述这个app的功能部分，包括截屏，保存图片，分享，跳转其他app，SharedPreference保存数据，调用原生方法，多语言等等。</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/android/">#android</a> <a href="/tags/flutter/">#flutter</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（布局篇）/">简单项目实战flutter（布局篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（功能篇）/">简单项目实战flutter（功能篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android 6.0适配权限申请/">Android 6.0适配权限申请</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android Template学习笔记/">Android Template学习笔记</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/编程/">编程</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

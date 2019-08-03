@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="柚子的技术博客">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="zhufree">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="简单项目实战flutter（功能篇）">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="柚子的技术博客">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="柚子的树">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>简单项目实战flutter（功能篇） - 柚子的树</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/08/03/简单项目实战flutter（功能篇）/">
+                简单项目实战flutter（功能篇）
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2 id="通过State改变界面"><a href="#通过State改变界面" class="headerlink" title="通过State改变界面"></a>通过State改变界面</h2><p>不同于在原生Android中手动改变控件的属性，Flutter使用State来管理界面状态，使用<code>setState</code>方法改变<code>state</code>将触发页面重绘，达到变化的目的，因此只需要维护一组可以改变的值来控制<code>widget</code>究竟如何显示，而无需去关注<code>widget</code>们本身，以下是一些简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">int langType = 0; // 0 中文 1 英文</span><br><span class="line"></span><br><span class="line">Text(</span><br><span class="line">  today.weekday == 5</span><br><span class="line">    ? langType == 1 ? &quot;YES!&quot; : &quot;是&quot;</span><br><span class="line">    : langType == 1 ? &quot;NO&quot; : &quot;不是&quot;,</span><br><span class="line">  style:</span><br><span class="line">    TextStyle(fontSize: 90, color: textColor, fontFamily: fontName),</span><br><span class="line">),</span><br><span class="line"></span><br><span class="line">String fontName = &quot;kaiTi&quot;; // 字体名</span><br><span class="line">style: TextStyle(color: textColor, fontFamily: fontName),</span><br><span class="line"></span><br><span class="line">Color bgColor; // 背景颜色</span><br><span class="line">Color bubbleColor; // 气泡颜色</span><br><span class="line">Color textColor; // 文字颜色</span><br><span class="line"></span><br><span class="line">decoration: BoxDecoration(</span><br><span class="line">  color: bubbleColor, // 设置气泡（文字的背景）颜色</span><br><span class="line">  borderRadius: BorderRadius.circular(30.0),</span><br><span class="line">),</span><br><span class="line">int screenType = 0; // 全屏/ 正方形</span><br><span class="line"></span><br><span class="line">bool showControlPanel = true; // 是否显示控制面板</span><br><span class="line">showControlPanel ? _buildControlPanel() : Container(),</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在需要设置控件的可见性时，查了一些实现方式看看有什么对应于Android里面的<code>setVisibility</code>，有设置透明度为0和使用<code>Offstage</code>控件两种方式，但是在查阅<code>Offstage</code>的源码说明时发现，官方建议<code>Offstage</code>适用于测量一些不能显示的控件大小，如果单纯只是显示和隐藏永健，只需要在整个<code>widget</code>树中移除这个<code>widget</code>即可。恍然大悟，从这方面说flutter对于修改整个页面结构可以说非常随心所欲，和原生的思维很不一样，不能从原生直接“翻译”过来。</p>
+</blockquote>
+<h2 id="颜色值使用"><a href="#颜色值使用" class="headerlink" title="颜色值使用"></a>颜色值使用</h2><p>可以使用以下办法来使用确定的颜色值：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Color c = <span class="keyword">const</span> Color(<span class="number">0xFF42A5F5</span>);</span><br><span class="line">Color c = <span class="keyword">const</span> Color.fromARGB(<span class="number">0xFF</span>, <span class="number">0x42</span>, <span class="number">0xA5</span>, <span class="number">0xF5</span>);</span><br><span class="line">Color c = <span class="keyword">const</span> Color.fromARGB(<span class="number">255</span>, <span class="number">66</span>, <span class="number">165</span>, <span class="number">245</span>);</span><br><span class="line">Color c = <span class="keyword">const</span> Color.fromRGBO(<span class="number">66</span>, <span class="number">165</span>, <span class="number">245</span>, <span class="number">1.0</span>);</span><br><span class="line">Color c1 = <span class="keyword">const</span> Color(<span class="number">0xFFFFFF</span>); <span class="comment">// fully transparent white (invisible)</span></span><br><span class="line">Color c2 = <span class="keyword">const</span> Color(<span class="number">0xFFFFFFFF</span>); <span class="comment">// fully opaque white (visible)</span></span><br></pre></td></tr></table></figure>
+
+<p>由最后两行可知，传入六位颜色值是完全看不见的，必须要在前面加上FF构成八位。<br>同时flutter内置了一些常用的颜色，用<code>Colors.xxx</code>即可，同时还可以在后面跟数值来描述颜色的深浅：<code>Colors.xxx[100]</code></p>
+<h2 id="使用自定义字体"><a href="#使用自定义字体" class="headerlink" title="使用自定义字体"></a>使用自定义字体</h2><p>flutter使用字体也很简单，将字体文件准备好，在<code>packages.yaml</code>文件中配置之后就可以在<code>Text</code>的<code>style</code>中使用了。<br>配置文件的格式如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fonts:</span></span><br><span class="line"><span class="attr">  - family:</span> <span class="string">MyCustomFont</span></span><br><span class="line"><span class="attr">    fonts:</span></span><br><span class="line"><span class="attr">      - asset:</span> <span class="string">fonts/MyCustomFont.ttf</span></span><br><span class="line"><span class="attr">      - style:</span> <span class="string">italic</span></span><br></pre></td></tr></table></figure>
+
+<p>要注意缩进</p>
+<blockquote>
+<p>这里踩了一个坑，我起初以为所有的资源文件都是放在<code>assets</code>文件夹下，或者在<code>assets</code>文件夹里面再新建子文件夹<code>fonts</code>之类，结果字体始终读取不到，才知道<code>fonts</code>文件夹应该在根目录之下。</p>
+</blockquote>
+<p>使用自定义字体的语法：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Text(</span><br><span class="line">  <span class="string">'This is a custom font text'</span>,</span><br><span class="line">  style: <span class="keyword">new</span> TextStyle(fontFamily: <span class="string">'MyCustomFont'</span>),</span><br></pre></td></tr></table></figure>
+
+<h2 id="支持多语言"><a href="#支持多语言" class="headerlink" title="支持多语言"></a>支持多语言</h2><p>我是按照《Flutter实战》这本书中的<a href="https://book.flutterchina.club/chapter12/multi_languages_support.html" target="_blank" rel="noopener">国际化</a>部分完成的，感觉相比于原生只需要配置几个xml文件，还是复杂了很多，android中<code>&lt;string&gt;xxx&lt;/string&gt;</code>就能表达的东西在arb文件中需要添加更多的信息，用于给专业的翻译人员参考可能会比较有用，个人感觉还是略繁琐了，如果不是用sublime批量操作我可能要专门写个脚本把xml转成arb？</p>
+<p>arb格式的字符串信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;appName&quot;: &quot;今天是周五吗？&quot;,</span><br><span class="line">&quot;@appName&quot;: &#123;</span><br><span class="line">  &quot;description&quot;: &quot;Title for the Friday application&quot;,</span><br><span class="line">  &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">  &quot;placeholders&quot;: &#123;&#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>具体步骤《Flutter实战》中都有，就不大段复制了，说一下这个过程中我遇到的坑：</p>
+<ol>
+<li><p>一开始我直接跳到第三节使用<code>intl</code>包，没注意设置<code>Locales</code>和<code>Delegates</code>这一段，导致一直不成功，仔细看了好几遍示例代码才发现问题在哪里：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter_localizations/flutter_localizations.dart&apos;;</span><br><span class="line"></span><br><span class="line">new MaterialApp(</span><br><span class="line"> localizationsDelegates: [</span><br><span class="line">   // 本地化的代理类</span><br><span class="line">   GlobalMaterialLocalizations.delegate,</span><br><span class="line">   GlobalWidgetsLocalizations.delegate,</span><br><span class="line"> ],</span><br><span class="line"> supportedLocales: [</span><br><span class="line">    const Locale(&apos;en&apos;, &apos;US&apos;), // 美国英语</span><br><span class="line">    const Locale(&apos;zh&apos;, &apos;CN&apos;), // 中文简体</span><br><span class="line">    //其它Locales</span><br><span class="line">  ],</span><br><span class="line">  // ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用占位符的字符串在flutter中是用<code>${}</code>来表示空位处的字符串，与普通字符串的对比：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 添加字符串时：</span><br><span class="line">String get titleText &#123;</span><br><span class="line">return Intl.message(</span><br><span class="line">    &apos;Text&apos;,</span><br><span class="line">    name: &apos;titleText&apos;,</span><br><span class="line">    desc: &apos;&apos;,</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">String titleMoreColor(title) =&gt; Intl.message(</span><br><span class="line">  &apos;More $title Color&apos;,</span><br><span class="line">  name: &apos;titleMoreColor&apos;,</span><br><span class="line">  desc: &apos;&apos;,</span><br><span class="line">  args: [title],</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>生成的原始arb文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;titleText&quot;: &quot;Text&quot;,</span><br><span class="line">&quot;@titleText&quot;: &#123;</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">  &quot;placeholders&quot;: &#123;&#125;</span><br><span class="line">&#125;,</span><br><span class="line">&quot;titleMoreColor&quot;: &quot;More &#123;title&#125; Color&quot;,</span><br><span class="line">&quot;@titleMoreColor&quot;: &#123;</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">  &quot;placeholders&quot;: &#123;</span><br><span class="line">    &quot;title&quot;: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>在手动翻译成中文时，我不小心把<code>%1$s</code>复制到了字符串中，而不是<code>{}</code>这样的格式，于是在插入文字的时候就失败了，不过这种应该是小概率问题。</p>
+<h2 id="截图-amp-保存图片"><a href="#截图-amp-保存图片" class="headerlink" title="截图&amp;保存图片"></a>截图&amp;保存图片</h2><h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p>在Flutter中对widget进行截图需要在widget外部套一层<code>RepaintBoundary</code>，同时给它指定一个key，在截图时通过这个key拿到该<code>RepaintBoundary</code>进行截图：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RepaintBoundary(</span><br><span class="line">  key: screenKey,</span><br><span class="line">  child: ...</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+<p>截图时：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter/rendering.dart&apos;;</span><br><span class="line">import &apos;dart:ui&apos; as ui;</span><br><span class="line">import &apos;dart:typed_data&apos;;</span><br><span class="line">import &apos;dart:io&apos;;</span><br><span class="line"></span><br><span class="line">RenderRepaintBoundary boundary =</span><br><span class="line">        screenKey.currentContext.findRenderObject(); // 获取要截图的部分</span><br><span class="line">ui.Image image = await boundary.toImage(pixelRatio: 3.0); // 用toImage转为图片</span><br><span class="line">ByteData byteData = await image.toByteData(format: ui.ImageByteFormat.png);</span><br><span class="line">Uint8List pngBytes = byteData.buffer.asUint8List(); // 图片转成字节</span><br></pre></td></tr></table></figure>
+
+<p>这里有几个需要注意的地方：</p>
+<ul>
+<li>此处用的<code>Image</code>是<code>dart:ui</code>库中的<code>Image</code>，与widget库中的Image重名，所以需要加以区分，先导入ui库：<code>import &#39;dart:ui&#39; as ui;</code>，然后用<code>ui.Image</code>去引用，同样处理字节需要<code>import &#39;dart:typed_data&#39;;</code>处理文件需要<code>import &#39;dart:io&#39;;</code></li>
+<li>转换为图片时的<code>pixelRatio</code>属性默认是<code>1.0</code>，但是实测<code>1.0</code>很糊，调到<code>3.0</code>才是高清原图的样子。</li>
+</ul>
+<h3 id="保存图片"><a href="#保存图片" class="headerlink" title="保存图片"></a>保存图片</h3><p>拿到字节之后，就是创建一个文件然后把字节写进去就可以了，这里为了获取系统目录，使用了一个<code>path_provider</code>的库：<code>path_provider: ^0.5.0</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:path_provider/path_provider.dart&apos;;</span><br><span class="line"></span><br><span class="line">Future&lt;File&gt; _getLocalFile() async &#123;</span><br><span class="line">  // 获取应用目录</span><br><span class="line">  Directory dir =</span><br><span class="line">      new Directory((await getExternalStorageDirectory()).path + &quot;/Friday&quot;);</span><br><span class="line">  if (!await dir.exists()) &#123;</span><br><span class="line">    dir.createSync();</span><br><span class="line">  &#125;</span><br><span class="line">  return new File(&apos;$&#123;dir.absolute.path&#125;/screenshot_$&#123;DateTime.now()&#125;.png&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里<code>getExternalStorageDirectory()</code>获取的是sd卡根目录，我在后面加了一个代表app根目录的路径，如果没有就创建一下，接着拼接出想要的文件名就可以了。<br>除了<code>getExternalStorageDirectory()</code>，还可以用<code>getTemporaryDirectory()</code>获取临时文件夹目录。<br>我的需求有保存图片也有临时保存用于设置桌面壁纸和分享，所以用不同的type去获取不同的文件夹下的文件，然后用<code>writeAsBytes</code>方法写入字节。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File file = await (type == 0 ? _getLocalFile() : _getCacheFile());</span><br><span class="line">await file.writeAsBytes(pngBytes);</span><br></pre></td></tr></table></figure>
+
+<p>当然，要保存文件不要忘了在原生代码清单文件中添加权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.SET_WALLPAPER&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="保存资源图片"><a href="#保存资源图片" class="headerlink" title="保存资源图片"></a>保存资源图片</h3><p>如何把<code>assets</code>里面的图片保存到手机中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 获取本地保存的文件位置</span><br><span class="line">File file = await getLocalFile(donationImgName.substring(7));</span><br><span class="line">// 使用DefaultAssetBundle加载图片文件</span><br><span class="line">DefaultAssetBundle.of(context)</span><br><span class="line">    .load(donationImgName)</span><br><span class="line">    .then((data) &#123;</span><br><span class="line">    // 加载的字节数据（ByteData）</span><br><span class="line">  Uint8List pngBytes = data.buffer.asUint8List();</span><br><span class="line">  // 转成Uint8List然后保存到文件</span><br><span class="line">  file.writeAsBytes(pngBytes);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>和前面一样也是保存过程基本一样，所以关键是用<code>DefaultAssetBundle</code>获取到图片资源文件的数据。</p>
+<blockquote>
+<p>同字体文件一样，图片也是在根目录新建<code>images</code>文件夹，而不是什么<code>assets</code>文件夹。</p>
+</blockquote>
+<h2 id="调用原生方法"><a href="#调用原生方法" class="headerlink" title="调用原生方法"></a>调用原生方法</h2><p>在用上一节的方法保存好文件之后，我有一个设置图片为壁纸的需求，这个在Flutter里面是没办法实现的，就需要和原生交互了。<br>首先需要定义一个<code>channel</code>，和原生代码对上暗号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter/services.dart&apos;;</span><br><span class="line">static const _channel = const MethodChannel(&apos;wallpaper&apos;);</span><br><span class="line">await _channel.invokeMethod(&apos;setWallpaper&apos;, file.path); // 调用setWallpaper方法，文件路径作为参数传递</span><br></pre></td></tr></table></figure>
+
+<p>在原生代码中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">val channel = &quot;wallpaper&quot;</span><br><span class="line">MethodChannel(flutterView, channel).setMethodCallHandler &#123; methodCall, result -&gt;</span><br><span class="line">    // 判断方法名</span><br><span class="line">	if (methodCall.method == &quot;setWallpaper&quot;) &#123;</span><br><span class="line">        // 设置壁纸的方法封装在setWallpaper中，methodCall.arguments as String拿到路径参数</span><br><span class="line">        val setWallpaperResult = setWallpaper(methodCall.arguments as String)</span><br><span class="line"></span><br><span class="line">        if (setWallpaperResult == 0) &#123;</span><br><span class="line">	        // 成功的回调</span><br><span class="line">            result.success(setWallpaperResult)</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">	        // 失败的回调</span><br><span class="line">            result.error(&quot;UNAVAILABLE&quot;, &quot;&quot;, null)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体怎么设置壁纸就不说了可以看代码。</p>
+<h2 id="分享到外部"><a href="#分享到外部" class="headerlink" title="分享到外部"></a>分享到外部</h2><p>分享也用了一个包，其实搜了一下用于分享的包有好几个，看示例代码选了一个比较符合需求的<code>esys_flutter_share: ^1.0.0</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:esys_flutter_share/esys_flutter_share.dart&apos;;</span><br><span class="line"></span><br><span class="line">await Share.file(&apos;Friday&apos;, &apos;friday.png&apos;, pngBytes, &apos;image/png&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>其他的使用可以参考这个包的<a href="https://pub.dartlang.org/packages/esys_flutter_share#-readme-tab-" target="_blank" rel="noopener">example</a>，具体原理还是调用原生代码，<code>esys_flutter_share.dart</code>这个源码非常简单。</p>
+<h2 id="打开其他app"><a href="#打开其他app" class="headerlink" title="打开其他app"></a>打开其他app</h2><p>这个功能用到了<code>url_launcher: ^5.0.2</code>，在这里做了一个判断，如果手机上有安装某黄色app，就用scheme直接打开，如果没有就跳转腾讯应用宝下载（我真贴心）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:url_launcher/url_launcher.dart&apos;;</span><br><span class="line"></span><br><span class="line">static const jikeUrl = &quot;jike://xxxx.xx/topic/565ac9dd4b715411006b5ecd&quot;;</span><br><span class="line">static const downJikeLink =</span><br><span class="line">    &quot;http://a.app.qq.com/o/simple.jsp?pkgname=com.ruguoapp.jike&amp;ckey=CK1411402428437&quot;;</span><br><span class="line"></span><br><span class="line">_toJike() async &#123;</span><br><span class="line">  if (await canLaunch(jikeUrl)) &#123;</span><br><span class="line">    await launch(jikeUrl);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    await launch(downJikeLink);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="SharedPreferences存储"><a href="#SharedPreferences存储" class="headerlink" title="SharedPreferences存储"></a>SharedPreferences存储</h2><p>使用了<code>shared_preferences: ^0.5.1+2</code>这个包，然后简单封装了几个方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:shared_preferences/shared_preferences.dart&apos;;</span><br><span class="line"></span><br><span class="line">void saveString(key, value) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  prefs.setString(key, value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void saveInt(key, value) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  prefs.setInt(key, value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Future&lt;String&gt; getString(key) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  return prefs.getString(key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Future&lt;int&gt; getInt(key) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  return prefs.getInt(key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用时</span><br><span class="line">getString(CN_FONT_NAME).then((name) &#123;</span><br><span class="line">  setState(() &#123;</span><br><span class="line">    fontName = null == name ? &apos;kaiTi&apos; : name;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>以上几个功能用的包都是封装了和原生的交互，其实自己实现也未尝不可，但是ios还不会写，所以不如用现成的轮子来的方便，不过设置壁纸这个功能还没有找到符合需要的包，只能自己先写了。</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/android/">#android</a> <a href="/tags/flutter/">#flutter</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（布局篇）/">简单项目实战flutter（布局篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（功能篇）/">简单项目实战flutter（功能篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android 6.0适配权限申请/">Android 6.0适配权限申请</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android Template学习笔记/">Android Template学习笔记</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/编程/">编程</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

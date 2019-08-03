@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="柚子的技术博客">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="zhufree">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="柚子的树">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="柚子的技术博客">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="柚子的树">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>柚子的树</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">柚子的树</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2019/08/03/简单项目实战flutter（布局篇）/">
+                简单项目实战flutter（布局篇）
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这是一个在撸完两个官方Demo之后，为了实践操作重写了原来app的项目。<br>虽然这个app基本上只有一个页面，算不上复杂但可以说内容丰富，涉及到的常用功能也不少，在花了三天假期的两天撸完大部分内容之后，感觉还是学到了不少知识点，在此做一些总结归纳，避免过几天忘记了。</p>
+<p>项目地址：<a href="https://github.com/zhufree/friday_today" target="_blank" rel="noopener">https://github.com/zhufree/friday_today</a><br>因为整体还没完全完成，主体代码就没有分几个文件，都放在 <a href="https://github.com/zhufree/friday_today/blob/master/lib/main.dart" target="_blank" rel="noopener">https://github.com/zhufree/friday_today/blob/master/lib/main.dart</a> ，一共800多行</p>
+<p>这里是原来的原生代码，全部用kotlin写的，也是基本上都在一个Activity里面：<br><a href="https://github.com/zhufree/Fraiday-Android/blob/master/app/src/main/java/info/free/duangjike/friday/FridayActivity.kt" target="_blank" rel="noopener">https://github.com/zhufree/Fraiday-Android/blob/master/app/src/main/java/info/free/duangjike/friday/FridayActivity.kt</a></p>
+<p>放两张截图对比，上面是flutter版本，下面是原生Android版本：</p>
+<img src="/2019/08/03/简单项目实战flutter（布局篇）/9675704E1EC0B381C85BD9AC71EB0253.jpg">
+<img src="/2019/08/03/简单项目实战flutter（布局篇）/FFB61CDE8564B6FD617852B3E9597B11.jpg">
+
+<p>总体来说Flutter的布局方式是和ReactNative类似的，State来控制状态，以及Flex布局之类。<br>flutter里面的描述控件的是widget，描述布局的也是widget，于是不得不面临重重嵌套，写布局时十分怀念方便的ConstraintLayout，不过写多了之后发现这种布局方式有一个好处：就是非常容易写一个方法返回一个通用widget，然后只需要调用方法就可以重复构建类似的布局，虽然在android可以用include标签（只能重用布局），也可以用自定义布局（需要新建类比较麻烦），但都不如flutter这样直接用一个方法封装来的方便快捷。</p>
+<p>接下来从根布局捋一捋用到的widget和一些踩到的坑：</p>
+<h2 id="根布局：Stack，Position和AspectRatio"><a href="#根布局：Stack，Position和AspectRatio" class="headerlink" title="根布局：Stack，Position和AspectRatio"></a>根布局：Stack，Position和AspectRatio</h2><p>app的界面主要分为两部分，用于展示的界面（包括背景和文字），和用于控制的界面（即图上的黑色半透明有一堆按钮的部分），其中展示部分有占全屏幕和缩减为正方形两种模式，因此不论如何这两个部分肯定是重叠的，我用两个方法分别构建这两部分的组件，然后使用Stack来放置这两个部分（最外层这个body是Scaffold的内容）：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">body: Stack(</span><br><span class="line"> alignment: Alignment.bottomCenter,</span><br><span class="line">  children: &lt;Widget&gt;[</span><br><span class="line">  <span class="comment">// 展示部分需要整体居中</span></span><br><span class="line">    Center(</span><br><span class="line">    <span class="comment">// 套的这层RepaintBoundary是用来截屏的，后面再说</span></span><br><span class="line">      child: RepaintBoundary(</span><br><span class="line">        key: screenKey,</span><br><span class="line">        child: screenType == <span class="number">1</span></span><br><span class="line">	        <span class="comment">// 宽高一比一的情况</span></span><br><span class="line">            ? AspectRatio(</span><br><span class="line">                aspectRatio: <span class="number">1</span> / <span class="number">1</span>,</span><br><span class="line">                child: Container(</span><br><span class="line">                  color: bgColor,</span><br><span class="line">                  child: _buildShowContent(),</span><br><span class="line">                ),</span><br><span class="line">              )</span><br><span class="line">             <span class="comment">// 占全屏幕的情况</span></span><br><span class="line">            : Container(</span><br><span class="line">                color: bgColor,</span><br><span class="line">                child: _buildShowContent(),</span><br><span class="line">              ),</span><br><span class="line">      ),</span><br><span class="line">    ),</span><br><span class="line">    _buildControlPanel(),</span><br><span class="line">  ],</span><br><span class="line">));</span><br></pre></td></tr></table></figure>
+
+<p>最初我以为在子布局中设置alignment为botton就可以把<code>controlPanel</code>部分固定在底部，但实际并没有效果，这块内容飞到了顶上，半透明背景也没有出现，推测是<code>controlPanel</code>的内容占满了屏幕高度，就算是固定在底部也看不出来。所以解决方式是在<code>controlPanel</code>中给<code>Column</code>添加纵轴上的最大值<code>mainAxisSize: MainAxisSize.min</code>（参见<code>_buildControlPanel()</code>方法的代码）。在最初瞎几把乱试的时候误打误撞发现了一个可以达成相同效果的方式，就是使用<code>Pisitioned</code>来固定。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 使用Positioned把这部分固定在底部，然后left和right为0使布局撑开达到宽度match_parent的效果</span><br><span class="line">Positioned(</span><br><span class="line">  bottom: 0,</span><br><span class="line">  left: 0,</span><br><span class="line">  right: 0,</span><br><span class="line">  child: _buildControlPanel(),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><code>AspectRatio</code>的作用是使子布局宽高限制为固定宽高比，属性的作用都很显而易见，就不赘述了。</p>
+<h2 id="文字展示部分，Column，BoxDecoration"><a href="#文字展示部分，Column，BoxDecoration" class="headerlink" title="文字展示部分，Column，BoxDecoration"></a>文字展示部分，Column，BoxDecoration</h2><p>展示的部分布局很简单，就是从上到下摆上几个文字，用<code>Column</code>就可以实现，给<code>Column</code>设置在主轴上居中。flutter不像android所有<code>View</code>都可以设置<code>margin</code>和<code>padding</code>，而是要在外面套上<code>Container</code>，然后给<code>Container</code>设置设置各种属性来修饰。<br><code>BoxDecoration</code>则可以很方便的给<code>Container</code>的子元素设置背景色，圆角，边框，阴影等效果，让我觉得比较实用的就是对于<code>Button</code>类有一个现成的半圆圆角方法，在android里实现一般需要确定高度，不然就只能等渲染完了再按照高度的一半设置圆角。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制中间显示的部分</span><br><span class="line">_buildShowContent() &#123;</span><br><span class="line">  return Column(</span><br><span class="line">        mainAxisAlignment: MainAxisAlignment.center, // 子布局在横轴上居中</span><br><span class="line">        children: &lt;Widget&gt;[</span><br><span class="line">          Container(</span><br><span class="line">            margin: EdgeInsets.only(bottom: 20.0),</span><br><span class="line">//              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),</span><br><span class="line">            height: 60.0,</span><br><span class="line">            // 不是按钮没有现成的半圆方法，设置固定高度再加圆角</span><br><span class="line">            decoration: BoxDecoration(</span><br><span class="line">              color: bubbleColor, // 设置气泡（文字的背景）颜色</span><br><span class="line">              borderRadius: BorderRadius.circular(30.0),</span><br><span class="line">            ),</span><br><span class="line">            child: Center(// 使文字整体居中</span><br><span class="line">              widthFactor: 1.3, // 宽度是文字宽度的1.3倍</span><br><span class="line">              child: Text(</span><br><span class="line">                langType == 0 ? &quot;今天是周五吗？&quot; : &quot;Is today Friday?&quot;,</span><br><span class="line">                style: TextStyle(</span><br><span class="line">                    fontSize: 25, color: textColor, fontFamily: fontName),</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">          Text(</span><br><span class="line">            today.weekday == 5</span><br><span class="line">                ? langType == 1 ? &quot;YES!&quot; : &quot;是&quot;</span><br><span class="line">                : langType == 1 ? &quot;NO&quot; : &quot;不是&quot;,</span><br><span class="line">            style:</span><br><span class="line">                TextStyle(fontSize: 90, color: textColor, fontFamily: fontName),</span><br><span class="line">          ),</span><br><span class="line">          Container(</span><br><span class="line">            margin: EdgeInsets.only(top: 20.0),</span><br><span class="line">            child: Text(</span><br><span class="line">              &quot;$&#123;weekdayToString(today.weekday)&#125; $&#123;today.year&#125;.$&#123;today.month&#125;.$&#123;today.day&#125;&quot;,</span><br><span class="line">              textAlign: TextAlign.center,</span><br><span class="line">              style: TextStyle(color: textColor, fontFamily: fontName),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第一行文字有一个白色圆角背景作为气泡，文字要在气泡中居中，在android里我使用<code>gravity=center</code>，然后设置好<code>padding</code>，最后根据渲染完之后文字的整个高度来设置圆角，但在这里我固定了背景高度，由于无法知道文字的确切高度就不能用设置padding 的方法使文字居中了，解决方案是使用了一个<code>Center</code>包裹Text，宽度则由<code>widthFactor</code>设置为文字宽度的倍数，flutter里面用倍数设置宽度的操作让我觉得很奇怪。</p>
+<h2 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h2><p>控制面板由各种按钮组成，整体是一个<code>Column</code>从上到下一共7行，各行用<code>Row</code>来排布按钮，是比较规律的排列方式，因为按钮有很多相似性，此处用了好几个方法来封装不同的按钮：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制整个控制面板</span><br><span class="line">_buildControlPanel() &#123;</span><br><span class="line">  return Container(</span><br><span class="line">    padding: EdgeInsets.all(12.0),</span><br><span class="line">    color: Color.fromARGB(30, 0, 0, 0), // 半透明的黑色背景</span><br><span class="line">    child: Column(</span><br><span class="line">      crossAxisAlignment: CrossAxisAlignment.start, // 子布局在横轴上左对齐</span><br><span class="line">      mainAxisSize: MainAxisSize.min, // 高度保持最小高度以固定在底部</span><br><span class="line">      children: &lt;Widget&gt;[</span><br><span class="line">        // 前三行分别是背景，气泡和文字的颜色控制，用一个方法封装</span><br><span class="line">        _buildColorController(0),</span><br><span class="line">        _buildColorController(1),</span><br><span class="line">        _buildColorController(2),</span><br><span class="line">        // 展示可选择的字体</span><br><span class="line">        Container(</span><br><span class="line">          height: 30.0,</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          // 中文字体只有4个但是英文有11个，需要滚动，所以使用ListView而不是Row</span><br><span class="line">          child: new ListView(</span><br><span class="line">            padding: EdgeInsets.all(0.0),</span><br><span class="line">            scrollDirection: Axis.horizontal, // 设置横向滚动</span><br><span class="line">            children: _buildFontRow(langType), // 根据字体种类生成切换字体的按钮组</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        Container(</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          child: Row(</span><br><span class="line">            // 一行四个按钮，用通用的方法生成，点击事件也从外部传入</span><br><span class="line">            mainAxisAlignment: MainAxisAlignment.start,</span><br><span class="line">            children: &lt;Widget&gt;[</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).square,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; setState(() &#123;</span><br><span class="line">                        screenType = 1;</span><br><span class="line">                      &#125;)),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).full,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; setState(() &#123;</span><br><span class="line">                        screenType = 0;</span><br><span class="line">                      &#125;)),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleCn,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; &#123;_changeLangType(0)&#125;),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleEn,</span><br><span class="line">                    style: TextStyle(color: FridayColors.jikeWhite),</span><br><span class="line">                  ),</span><br><span class="line">                  25.0,</span><br><span class="line">                  () =&gt; &#123;_changeLangType(1)&#125;),</span><br><span class="line">            ],</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        // 四个功能按钮是2X2，用两个row</span><br><span class="line">        Container(</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          child: Row(</span><br><span class="line">            children: &lt;Widget&gt;[</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).wallpaper,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                        color: FridayColors.jikeWhite, fontSize: 14.0),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  () =&gt; &#123;_capturePng(1)&#125;),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleShare,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                      color: FridayColors.jikeWhite,</span><br><span class="line">                      fontSize: 14.0,</span><br><span class="line">                    ),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  () =&gt; &#123;_capturePng(2)&#125;),</span><br><span class="line">            ],</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        Container(</span><br><span class="line">          margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">          child: Row(</span><br><span class="line">            children: &lt;Widget&gt;[</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).group,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                        color: FridayColors.jikeWhite, fontSize: 14.0),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  _toJike),</span><br><span class="line">              _buildCommonButton(</span><br><span class="line">                  Text(</span><br><span class="line">                    FridayLocalizations.of(context).titleSave,</span><br><span class="line">                    style: TextStyle(</span><br><span class="line">                      color: FridayColors.jikeWhite,</span><br><span class="line">                      fontSize: 14.0,</span><br><span class="line">                    ),</span><br><span class="line">                  ),</span><br><span class="line">                  40.0,</span><br><span class="line">                  () =&gt; &#123;_capturePng(0)&#125;),</span><br><span class="line">            ],</span><br><span class="line">          ),</span><br><span class="line">        )</span><br><span class="line">      ],</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="行：Expanded，Button"><a href="#行：Expanded，Button" class="headerlink" title="行：Expanded，Button"></a>行：Expanded，Button</h3><p>接下来绘制头三行，因为是一样的格式，封装在下面这个方法里：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制切换颜色的三行 [type]背景/气泡/字体</span><br><span class="line">_buildColorController(int type) &#123;</span><br><span class="line">  return Container(</span><br><span class="line">    margin: EdgeInsets.only(bottom: 8.0),</span><br><span class="line">    child: Row(</span><br><span class="line">      mainAxisAlignment: MainAxisAlignment.start,  // 主轴上从左到右</span><br><span class="line">      mainAxisSize: MainAxisSize.max, // 宽度占满</span><br><span class="line">      children: &lt;Widget&gt;[</span><br><span class="line">        Text(</span><br><span class="line">          getTitleByType(type, context), // 标题由type获取</span><br><span class="line">          style: TextStyle(</span><br><span class="line">            fontSize: 12.0,</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        // 生成颜色按钮</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeWhite),</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeYellow),</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeBlue),</span><br><span class="line">        _buildColorClickDot(type, FridayColors.jikeBlack),</span><br><span class="line">        // Expanded占满剩余宽度</span><br><span class="line">        Expanded(</span><br><span class="line">          child: Container(</span><br><span class="line">            height: 30.0,</span><br><span class="line">            padding: EdgeInsets.all(2.0), // 这个padding用于挤压缩小按钮本身</span><br><span class="line">            margin: EdgeInsets.only(left: 8.0),</span><br><span class="line">            child: RaisedButton(// 有凸起阴影效果的按钮</span><br><span class="line">              child: Text(</span><br><span class="line">                FridayLocalizations.of(context).moreColor,</span><br><span class="line">                style: TextStyle(fontSize: 12.0, color: Colors.white),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () =&gt; &#123;_showPickColorDialog(type)&#125;,</span><br><span class="line">              color: Colors.black26,</span><br><span class="line">              shape: StadiumBorder(), // 半圆形背景</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        Expanded(</span><br><span class="line">          child: Container(</span><br><span class="line">            height: 30.0,</span><br><span class="line">            padding: EdgeInsets.all(2.0),</span><br><span class="line">            margin: EdgeInsets.only(left: 8.0),</span><br><span class="line">            child: RaisedButton(</span><br><span class="line">              padding: EdgeInsets.all(0.0),</span><br><span class="line">              child: Text(</span><br><span class="line">                FridayLocalizations.of(context).customColor,</span><br><span class="line">                style: TextStyle(fontSize: 12.0, color: Colors.white),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () =&gt; &#123;_showCustomColorDialog(type)&#125;,</span><br><span class="line">              color: Colors.black26,</span><br><span class="line">              shape: StadiumBorder(),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">      ],</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最主要用到的空间就是<code>RaisedButton</code>，是有凸起阴影效果的按钮，如果要没有立体效果的可以使用<code>FlatButton</code>，<code>shape: StadiumBorder()</code>可以方便地使按钮有半圆形效果，这里顺便放出三个颜色按钮的生成方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/// 绘制点击切换颜色的小圆点</span><br><span class="line">_buildColorClickDot(int type, Color color) &#123;</span><br><span class="line">  return Container(</span><br><span class="line">    margin: EdgeInsets.only(left: 8.0),</span><br><span class="line">    child: Container(</span><br><span class="line">      // 限制按钮的宽度</span><br><span class="line">      width: 20.0,</span><br><span class="line">      height: 20.0,</span><br><span class="line">      child: RaisedButton(</span><br><span class="line">//          onPressed: _changeColor(type, color), // 这样写颜色出不来</span><br><span class="line">        onPressed: () =&gt; &#123;_changeColor(type, color)&#125;,</span><br><span class="line">        color: color,</span><br><span class="line">        // 设置为圆形按钮，如果不添加这个shape就是20*20的正方形</span><br><span class="line">        // 因为宽高一样，半圆和圆的结果是一样的，所以用shape: StadiumBorder()也ok</span><br><span class="line">        shape: CircleBorder(</span><br><span class="line">            side: BorderSide(</span><br><span class="line">          color: Colors.transparent,</span><br><span class="line">          width: 0,</span><br><span class="line">        )),</span><br><span class="line">      ),</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一开始我想像原生那样用一个有颜色的View设置一个点击事件就完事了，但是Flutter里面不是啥都可以点击的，如果不是<code>Button</code>类的<code>widget</code>，需要套一个<code>GestureDetector</code>的<code>widget</code>来添加点击事件（后面会用到），所以还是直接用了<code>Button</code>，立体效果看起来感觉比原来好一点。使用<code>Button</code>的时候起初感觉很麻烦的就是它有一些自带的<code>padding</code>等等，导致尺寸很不好控制，最后发现只要在在外面套上<code>Container</code>设置宽高就可以了，智障如我。</p>
+<p>一行最后两个文字按钮，本来也是总有<code>padding</code>导致文字放不下，甚至按钮本身超出屏幕，最后设置了<code>Expanded</code>来使它们的宽度自适应，但是这样在小屏上文字可能真的放不下，于是把文字减了字数→_→</p>
+<p>其他行也都是类似的结构，就不重复提了。</p>
+<h2 id="弹出部分：AlertDialog"><a href="#弹出部分：AlertDialog" class="headerlink" title="弹出部分：AlertDialog"></a>弹出部分：AlertDialog</h2><p>选更多颜色和自定义颜色时都会弹出<code>dialog</code>，flutter有现成的<code>Dialog</code>类型控件，一般使用<code>SimpleDialog</code>显示一个多行选项列表，<code>AlertDialog</code>显示自定义的内容，并在最下面有几个按钮。<br>flutter有一个自带的<code>showDialog</code>方法，接收一些参数，并使用一个<code>builder</code>来生成<code>Dialog</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/// 显示自定义颜色的dialog</span><br><span class="line">Future&lt;void&gt; _showCustomColorDialog(int type) async &#123;</span><br><span class="line">  return showDialog&lt;void&gt;(</span><br><span class="line">    context: context,</span><br><span class="line">    barrierDismissible: false, // user must tap button!</span><br><span class="line">    builder: (BuildContext context) &#123;</span><br><span class="line">      return AlertDialog(</span><br><span class="line">        contentPadding: EdgeInsets.all(16.0),</span><br><span class="line">        title: Text(getCustomColorTitleByType(type, context)),</span><br><span class="line">        content: ..., // 内容widget</span><br><span class="line">        actions: &lt;Widget&gt;[</span><br><span class="line">          FlatButton(</span><br><span class="line">            child: Text(&apos;OK&apos;),</span><br><span class="line">            onPressed: () &#123;</span><br><span class="line">              _handleSubmitted(type, _inputController.text);</span><br><span class="line">              Navigator.of(context).pop();</span><br><span class="line">            &#125;,</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      );</span><br><span class="line">    &#125;,</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以下是<code>dialog</code>的<code>content</code>部分内容：</p>
+<h3 id="可滑动Widget：GridView，SingleChildScrollView，Wrap"><a href="#可滑动Widget：GridView，SingleChildScrollView，Wrap" class="headerlink" title="可滑动Widget：GridView，SingleChildScrollView，Wrap"></a>可滑动Widget：GridView，SingleChildScrollView，Wrap</h3><p>其中一个Dialog需要展示500多个颜色列表，最初我使用了一个可滑动的<code>SingleChildScrollViewcontent</code>，其中放了500多个按钮，用的是从左往右一行一行的排列，用Wrap比ListView更合适</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">content: SingleChildScrollView(// 可滑动</span><br><span class="line">  child: Center( // 设置居中避免两侧空白不对称</span><br><span class="line">    child: Wrap(</span><br><span class="line">      spacing: 5.0,</span><br><span class="line">      runSpacing: 5.0,</span><br><span class="line">      children: getColorRows(type),</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+<p>但是在我看了一下SingleChildScrollView的源码之后，里面推荐了一堆别的控件，Flutter提供的控件太多了令人困惑，经过几次尝试，最终发现使用<code>GridView.count</code>可以完美实现，用法和Wrap很相似：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">content: GridView.count(</span><br><span class="line">  crossAxisCount: 8, // 一行的按钮个数</span><br><span class="line">  crossAxisSpacing: 5.0, //列间距</span><br><span class="line">  mainAxisSpacing: 5.0, // 行间距</span><br><span class="line">  children: getColorRows(type),</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入与提示：TextField，Snackbar"><a href="#输入与提示：TextField，Snackbar" class="headerlink" title="输入与提示：TextField，Snackbar"></a>输入与提示：TextField，Snackbar</h3><p>另一个<code>Dialog</code>则弹出文本输入框供输入六位或者八位颜色值，这里涉及到文本输入与控制，在官方Demo中有现成的例子，所以就直接拿来用了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">final TextEditingController _inputController = new TextEditingController();</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">content: TextField(</span><br><span class="line">  controller: _inputController,</span><br><span class="line">  decoration: InputDecoration(</span><br><span class="line">      hintText: FridayLocalizations.of(context).hintInputColor,</span><br><span class="line">      hintStyle: TextStyle(fontSize: 12.0)),</span><br><span class="line">),</span><br><span class="line">actions: &lt;Widget&gt;[</span><br><span class="line">  FlatButton(</span><br><span class="line">    child: Text(&apos;OK&apos;),</span><br><span class="line">    onPressed: () &#123;</span><br><span class="line">      _handleSubmitted(type, _inputController.text); // 点击ok时提交</span><br><span class="line">      Navigator.of(context).pop(); // dialog隐藏</span><br><span class="line">    &#125;,</span><br><span class="line">  ),</span><br><span class="line">],</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">void _handleSubmitted(int type, String text) &#123;</span><br><span class="line"> _inputController.clear(); // 清除输入的文字</span><br><span class="line">  if (text.length != 8 &amp;&amp; text.length != 6) &#123;</span><br><span class="line">    // 输入的格式不正确，弹出提示</span><br><span class="line">    (scaffoldKey.currentState as ScaffoldState).showSnackBar(new SnackBar(</span><br><span class="line">      content: new Text(FridayLocalizations.of(context).noticeWrongInput),</span><br><span class="line">    ));</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 设置颜色</span><br><span class="line">    _changeColor(</span><br><span class="line">        type, Color(int.parse(text.length == 8 ? &quot;0x$text&quot; : &quot;0xFF$text&quot;)));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里用到了一个<code>showSnackBar</code>来显示SnackBar，有一个小坑，我先开始用网上搜索到的<code>Scaffold.of(context).showSnackBar(snackBar);</code>来显示，结果一直报<code>Scaffold.of() called with a context that does not contain a Scaffold.</code>这个错，由于对flutter的<code>context</code>不够了解，在查阅了一些资料后大致知道要把什么<code>widget</code>拆出来，这样就能通过<code>context</code>找到了（参考<a href="https://juejin.im/post/5c665cb651882562914ec153" target="_blank" rel="noopener">这篇文章</a>），但是我并不想为了显示一个<code>snackBar</code>这么做，最后找到了另一个解决办法，<code>Scaffold.of(context)</code>是为了获取一个<code>ScaffoldState</code>，所以可以在<code>Scaffold</code>上添加一个<code>key</code>，再用这个<code>key</code>拿到<code>state</code>来调用方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">GlobalKey&lt;ScaffoldState&gt; scaffoldKey = GlobalKey();</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">@override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return Scaffold(</span><br><span class="line">        key: scaffoldKey,</span><br><span class="line">        body: ...</span><br><span class="line">        );</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">scaffoldKey.currentState.showSnackBar(new SnackBar(</span><br><span class="line">      content: new Text(FridayLocalizations.of(context).noticeWrongInput),</span><br><span class="line">    ));</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>整个页面的大致内容就是如此，原本我打算整出来就完事， 但在写这篇总结的时候也为了探索是不是有别的实现方式做了一些尝试，最终也进行了一些优化。<br>其实作为一个习惯了原生的Android开发者，很多时候都会困惑于原生很容易实现的效果放到Flutter中使用widget要怎么写，比如如何实现<code>WRAP_COTENT</code>和<code>MATCH_PARENT</code>（可以参考<a href="https://www.jianshu.com/p/7511cb18a05e" target="_blank" rel="noopener">这篇文章</a>）等等，正是因为如此，我认为需要写更多的布局才能逐渐习惯Flutter的代码风格。<br>下一篇文章（如果有的话）会描述这个app的功能部分，包括截屏，保存图片，分享，跳转其他app，SharedPreference保存数据，调用原生方法，多语言等等。</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2019/08/03/简单项目实战flutter（功能篇）/">
+                简单项目实战flutter（功能篇）
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h2 id="通过State改变界面"><a href="#通过State改变界面" class="headerlink" title="通过State改变界面"></a>通过State改变界面</h2><p>不同于在原生Android中手动改变控件的属性，Flutter使用State来管理界面状态，使用<code>setState</code>方法改变<code>state</code>将触发页面重绘，达到变化的目的，因此只需要维护一组可以改变的值来控制<code>widget</code>究竟如何显示，而无需去关注<code>widget</code>们本身，以下是一些简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">int langType = 0; // 0 中文 1 英文</span><br><span class="line"></span><br><span class="line">Text(</span><br><span class="line">  today.weekday == 5</span><br><span class="line">    ? langType == 1 ? &quot;YES!&quot; : &quot;是&quot;</span><br><span class="line">    : langType == 1 ? &quot;NO&quot; : &quot;不是&quot;,</span><br><span class="line">  style:</span><br><span class="line">    TextStyle(fontSize: 90, color: textColor, fontFamily: fontName),</span><br><span class="line">),</span><br><span class="line"></span><br><span class="line">String fontName = &quot;kaiTi&quot;; // 字体名</span><br><span class="line">style: TextStyle(color: textColor, fontFamily: fontName),</span><br><span class="line"></span><br><span class="line">Color bgColor; // 背景颜色</span><br><span class="line">Color bubbleColor; // 气泡颜色</span><br><span class="line">Color textColor; // 文字颜色</span><br><span class="line"></span><br><span class="line">decoration: BoxDecoration(</span><br><span class="line">  color: bubbleColor, // 设置气泡（文字的背景）颜色</span><br><span class="line">  borderRadius: BorderRadius.circular(30.0),</span><br><span class="line">),</span><br><span class="line">int screenType = 0; // 全屏/ 正方形</span><br><span class="line"></span><br><span class="line">bool showControlPanel = true; // 是否显示控制面板</span><br><span class="line">showControlPanel ? _buildControlPanel() : Container(),</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在需要设置控件的可见性时，查了一些实现方式看看有什么对应于Android里面的<code>setVisibility</code>，有设置透明度为0和使用<code>Offstage</code>控件两种方式，但是在查阅<code>Offstage</code>的源码说明时发现，官方建议<code>Offstage</code>适用于测量一些不能显示的控件大小，如果单纯只是显示和隐藏永健，只需要在整个<code>widget</code>树中移除这个<code>widget</code>即可。恍然大悟，从这方面说flutter对于修改整个页面结构可以说非常随心所欲，和原生的思维很不一样，不能从原生直接“翻译”过来。</p>
+</blockquote>
+<h2 id="颜色值使用"><a href="#颜色值使用" class="headerlink" title="颜色值使用"></a>颜色值使用</h2><p>可以使用以下办法来使用确定的颜色值：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Color c = <span class="keyword">const</span> Color(<span class="number">0xFF42A5F5</span>);</span><br><span class="line">Color c = <span class="keyword">const</span> Color.fromARGB(<span class="number">0xFF</span>, <span class="number">0x42</span>, <span class="number">0xA5</span>, <span class="number">0xF5</span>);</span><br><span class="line">Color c = <span class="keyword">const</span> Color.fromARGB(<span class="number">255</span>, <span class="number">66</span>, <span class="number">165</span>, <span class="number">245</span>);</span><br><span class="line">Color c = <span class="keyword">const</span> Color.fromRGBO(<span class="number">66</span>, <span class="number">165</span>, <span class="number">245</span>, <span class="number">1.0</span>);</span><br><span class="line">Color c1 = <span class="keyword">const</span> Color(<span class="number">0xFFFFFF</span>); <span class="comment">// fully transparent white (invisible)</span></span><br><span class="line">Color c2 = <span class="keyword">const</span> Color(<span class="number">0xFFFFFFFF</span>); <span class="comment">// fully opaque white (visible)</span></span><br></pre></td></tr></table></figure>
+
+<p>由最后两行可知，传入六位颜色值是完全看不见的，必须要在前面加上FF构成八位。<br>同时flutter内置了一些常用的颜色，用<code>Colors.xxx</code>即可，同时还可以在后面跟数值来描述颜色的深浅：<code>Colors.xxx[100]</code></p>
+<h2 id="使用自定义字体"><a href="#使用自定义字体" class="headerlink" title="使用自定义字体"></a>使用自定义字体</h2><p>flutter使用字体也很简单，将字体文件准备好，在<code>packages.yaml</code>文件中配置之后就可以在<code>Text</code>的<code>style</code>中使用了。<br>配置文件的格式如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fonts:</span></span><br><span class="line"><span class="attr">  - family:</span> <span class="string">MyCustomFont</span></span><br><span class="line"><span class="attr">    fonts:</span></span><br><span class="line"><span class="attr">      - asset:</span> <span class="string">fonts/MyCustomFont.ttf</span></span><br><span class="line"><span class="attr">      - style:</span> <span class="string">italic</span></span><br></pre></td></tr></table></figure>
+
+<p>要注意缩进</p>
+<blockquote>
+<p>这里踩了一个坑，我起初以为所有的资源文件都是放在<code>assets</code>文件夹下，或者在<code>assets</code>文件夹里面再新建子文件夹<code>fonts</code>之类，结果字体始终读取不到，才知道<code>fonts</code>文件夹应该在根目录之下。</p>
+</blockquote>
+<p>使用自定义字体的语法：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Text(</span><br><span class="line">  <span class="string">'This is a custom font text'</span>,</span><br><span class="line">  style: <span class="keyword">new</span> TextStyle(fontFamily: <span class="string">'MyCustomFont'</span>),</span><br></pre></td></tr></table></figure>
+
+<h2 id="支持多语言"><a href="#支持多语言" class="headerlink" title="支持多语言"></a>支持多语言</h2><p>我是按照《Flutter实战》这本书中的<a href="https://book.flutterchina.club/chapter12/multi_languages_support.html" target="_blank" rel="noopener">国际化</a>部分完成的，感觉相比于原生只需要配置几个xml文件，还是复杂了很多，android中<code>&lt;string&gt;xxx&lt;/string&gt;</code>就能表达的东西在arb文件中需要添加更多的信息，用于给专业的翻译人员参考可能会比较有用，个人感觉还是略繁琐了，如果不是用sublime批量操作我可能要专门写个脚本把xml转成arb？</p>
+<p>arb格式的字符串信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;appName&quot;: &quot;今天是周五吗？&quot;,</span><br><span class="line">&quot;@appName&quot;: &#123;</span><br><span class="line">  &quot;description&quot;: &quot;Title for the Friday application&quot;,</span><br><span class="line">  &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">  &quot;placeholders&quot;: &#123;&#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>具体步骤《Flutter实战》中都有，就不大段复制了，说一下这个过程中我遇到的坑：</p>
+<ol>
+<li><p>一开始我直接跳到第三节使用<code>intl</code>包，没注意设置<code>Locales</code>和<code>Delegates</code>这一段，导致一直不成功，仔细看了好几遍示例代码才发现问题在哪里：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter_localizations/flutter_localizations.dart&apos;;</span><br><span class="line"></span><br><span class="line">new MaterialApp(</span><br><span class="line"> localizationsDelegates: [</span><br><span class="line">   // 本地化的代理类</span><br><span class="line">   GlobalMaterialLocalizations.delegate,</span><br><span class="line">   GlobalWidgetsLocalizations.delegate,</span><br><span class="line"> ],</span><br><span class="line"> supportedLocales: [</span><br><span class="line">    const Locale(&apos;en&apos;, &apos;US&apos;), // 美国英语</span><br><span class="line">    const Locale(&apos;zh&apos;, &apos;CN&apos;), // 中文简体</span><br><span class="line">    //其它Locales</span><br><span class="line">  ],</span><br><span class="line">  // ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用占位符的字符串在flutter中是用<code>${}</code>来表示空位处的字符串，与普通字符串的对比：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 添加字符串时：</span><br><span class="line">String get titleText &#123;</span><br><span class="line">return Intl.message(</span><br><span class="line">    &apos;Text&apos;,</span><br><span class="line">    name: &apos;titleText&apos;,</span><br><span class="line">    desc: &apos;&apos;,</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">String titleMoreColor(title) =&gt; Intl.message(</span><br><span class="line">  &apos;More $title Color&apos;,</span><br><span class="line">  name: &apos;titleMoreColor&apos;,</span><br><span class="line">  desc: &apos;&apos;,</span><br><span class="line">  args: [title],</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>生成的原始arb文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;titleText&quot;: &quot;Text&quot;,</span><br><span class="line">&quot;@titleText&quot;: &#123;</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">  &quot;placeholders&quot;: &#123;&#125;</span><br><span class="line">&#125;,</span><br><span class="line">&quot;titleMoreColor&quot;: &quot;More &#123;title&#125; Color&quot;,</span><br><span class="line">&quot;@titleMoreColor&quot;: &#123;</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;type&quot;: &quot;text&quot;,</span><br><span class="line">  &quot;placeholders&quot;: &#123;</span><br><span class="line">    &quot;title&quot;: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>在手动翻译成中文时，我不小心把<code>%1$s</code>复制到了字符串中，而不是<code>{}</code>这样的格式，于是在插入文字的时候就失败了，不过这种应该是小概率问题。</p>
+<h2 id="截图-amp-保存图片"><a href="#截图-amp-保存图片" class="headerlink" title="截图&amp;保存图片"></a>截图&amp;保存图片</h2><h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p>在Flutter中对widget进行截图需要在widget外部套一层<code>RepaintBoundary</code>，同时给它指定一个key，在截图时通过这个key拿到该<code>RepaintBoundary</code>进行截图：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RepaintBoundary(</span><br><span class="line">  key: screenKey,</span><br><span class="line">  child: ...</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+<p>截图时：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter/rendering.dart&apos;;</span><br><span class="line">import &apos;dart:ui&apos; as ui;</span><br><span class="line">import &apos;dart:typed_data&apos;;</span><br><span class="line">import &apos;dart:io&apos;;</span><br><span class="line"></span><br><span class="line">RenderRepaintBoundary boundary =</span><br><span class="line">        screenKey.currentContext.findRenderObject(); // 获取要截图的部分</span><br><span class="line">ui.Image image = await boundary.toImage(pixelRatio: 3.0); // 用toImage转为图片</span><br><span class="line">ByteData byteData = await image.toByteData(format: ui.ImageByteFormat.png);</span><br><span class="line">Uint8List pngBytes = byteData.buffer.asUint8List(); // 图片转成字节</span><br></pre></td></tr></table></figure>
+
+<p>这里有几个需要注意的地方：</p>
+<ul>
+<li>此处用的<code>Image</code>是<code>dart:ui</code>库中的<code>Image</code>，与widget库中的Image重名，所以需要加以区分，先导入ui库：<code>import &#39;dart:ui&#39; as ui;</code>，然后用<code>ui.Image</code>去引用，同样处理字节需要<code>import &#39;dart:typed_data&#39;;</code>处理文件需要<code>import &#39;dart:io&#39;;</code></li>
+<li>转换为图片时的<code>pixelRatio</code>属性默认是<code>1.0</code>，但是实测<code>1.0</code>很糊，调到<code>3.0</code>才是高清原图的样子。</li>
+</ul>
+<h3 id="保存图片"><a href="#保存图片" class="headerlink" title="保存图片"></a>保存图片</h3><p>拿到字节之后，就是创建一个文件然后把字节写进去就可以了，这里为了获取系统目录，使用了一个<code>path_provider</code>的库：<code>path_provider: ^0.5.0</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:path_provider/path_provider.dart&apos;;</span><br><span class="line"></span><br><span class="line">Future&lt;File&gt; _getLocalFile() async &#123;</span><br><span class="line">  // 获取应用目录</span><br><span class="line">  Directory dir =</span><br><span class="line">      new Directory((await getExternalStorageDirectory()).path + &quot;/Friday&quot;);</span><br><span class="line">  if (!await dir.exists()) &#123;</span><br><span class="line">    dir.createSync();</span><br><span class="line">  &#125;</span><br><span class="line">  return new File(&apos;$&#123;dir.absolute.path&#125;/screenshot_$&#123;DateTime.now()&#125;.png&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里<code>getExternalStorageDirectory()</code>获取的是sd卡根目录，我在后面加了一个代表app根目录的路径，如果没有就创建一下，接着拼接出想要的文件名就可以了。<br>除了<code>getExternalStorageDirectory()</code>，还可以用<code>getTemporaryDirectory()</code>获取临时文件夹目录。<br>我的需求有保存图片也有临时保存用于设置桌面壁纸和分享，所以用不同的type去获取不同的文件夹下的文件，然后用<code>writeAsBytes</code>方法写入字节。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">File file = await (type == 0 ? _getLocalFile() : _getCacheFile());</span><br><span class="line">await file.writeAsBytes(pngBytes);</span><br></pre></td></tr></table></figure>
+
+<p>当然，要保存文件不要忘了在原生代码清单文件中添加权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.SET_WALLPAPER&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="保存资源图片"><a href="#保存资源图片" class="headerlink" title="保存资源图片"></a>保存资源图片</h3><p>如何把<code>assets</code>里面的图片保存到手机中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 获取本地保存的文件位置</span><br><span class="line">File file = await getLocalFile(donationImgName.substring(7));</span><br><span class="line">// 使用DefaultAssetBundle加载图片文件</span><br><span class="line">DefaultAssetBundle.of(context)</span><br><span class="line">    .load(donationImgName)</span><br><span class="line">    .then((data) &#123;</span><br><span class="line">    // 加载的字节数据（ByteData）</span><br><span class="line">  Uint8List pngBytes = data.buffer.asUint8List();</span><br><span class="line">  // 转成Uint8List然后保存到文件</span><br><span class="line">  file.writeAsBytes(pngBytes);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>和前面一样也是保存过程基本一样，所以关键是用<code>DefaultAssetBundle</code>获取到图片资源文件的数据。</p>
+<blockquote>
+<p>同字体文件一样，图片也是在根目录新建<code>images</code>文件夹，而不是什么<code>assets</code>文件夹。</p>
+</blockquote>
+<h2 id="调用原生方法"><a href="#调用原生方法" class="headerlink" title="调用原生方法"></a>调用原生方法</h2><p>在用上一节的方法保存好文件之后，我有一个设置图片为壁纸的需求，这个在Flutter里面是没办法实现的，就需要和原生交互了。<br>首先需要定义一个<code>channel</code>，和原生代码对上暗号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter/services.dart&apos;;</span><br><span class="line">static const _channel = const MethodChannel(&apos;wallpaper&apos;);</span><br><span class="line">await _channel.invokeMethod(&apos;setWallpaper&apos;, file.path); // 调用setWallpaper方法，文件路径作为参数传递</span><br></pre></td></tr></table></figure>
+
+<p>在原生代码中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">val channel = &quot;wallpaper&quot;</span><br><span class="line">MethodChannel(flutterView, channel).setMethodCallHandler &#123; methodCall, result -&gt;</span><br><span class="line">    // 判断方法名</span><br><span class="line">	if (methodCall.method == &quot;setWallpaper&quot;) &#123;</span><br><span class="line">        // 设置壁纸的方法封装在setWallpaper中，methodCall.arguments as String拿到路径参数</span><br><span class="line">        val setWallpaperResult = setWallpaper(methodCall.arguments as String)</span><br><span class="line"></span><br><span class="line">        if (setWallpaperResult == 0) &#123;</span><br><span class="line">	        // 成功的回调</span><br><span class="line">            result.success(setWallpaperResult)</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">	        // 失败的回调</span><br><span class="line">            result.error(&quot;UNAVAILABLE&quot;, &quot;&quot;, null)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体怎么设置壁纸就不说了可以看代码。</p>
+<h2 id="分享到外部"><a href="#分享到外部" class="headerlink" title="分享到外部"></a>分享到外部</h2><p>分享也用了一个包，其实搜了一下用于分享的包有好几个，看示例代码选了一个比较符合需求的<code>esys_flutter_share: ^1.0.0</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:esys_flutter_share/esys_flutter_share.dart&apos;;</span><br><span class="line"></span><br><span class="line">await Share.file(&apos;Friday&apos;, &apos;friday.png&apos;, pngBytes, &apos;image/png&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>其他的使用可以参考这个包的<a href="https://pub.dartlang.org/packages/esys_flutter_share#-readme-tab-" target="_blank" rel="noopener">example</a>，具体原理还是调用原生代码，<code>esys_flutter_share.dart</code>这个源码非常简单。</p>
+<h2 id="打开其他app"><a href="#打开其他app" class="headerlink" title="打开其他app"></a>打开其他app</h2><p>这个功能用到了<code>url_launcher: ^5.0.2</code>，在这里做了一个判断，如果手机上有安装某黄色app，就用scheme直接打开，如果没有就跳转腾讯应用宝下载（我真贴心）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:url_launcher/url_launcher.dart&apos;;</span><br><span class="line"></span><br><span class="line">static const jikeUrl = &quot;jike://xxxx.xx/topic/565ac9dd4b715411006b5ecd&quot;;</span><br><span class="line">static const downJikeLink =</span><br><span class="line">    &quot;http://a.app.qq.com/o/simple.jsp?pkgname=com.ruguoapp.jike&amp;ckey=CK1411402428437&quot;;</span><br><span class="line"></span><br><span class="line">_toJike() async &#123;</span><br><span class="line">  if (await canLaunch(jikeUrl)) &#123;</span><br><span class="line">    await launch(jikeUrl);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    await launch(downJikeLink);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="SharedPreferences存储"><a href="#SharedPreferences存储" class="headerlink" title="SharedPreferences存储"></a>SharedPreferences存储</h2><p>使用了<code>shared_preferences: ^0.5.1+2</code>这个包，然后简单封装了几个方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:shared_preferences/shared_preferences.dart&apos;;</span><br><span class="line"></span><br><span class="line">void saveString(key, value) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  prefs.setString(key, value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void saveInt(key, value) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  prefs.setInt(key, value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Future&lt;String&gt; getString(key) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  return prefs.getString(key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Future&lt;int&gt; getInt(key) async &#123;</span><br><span class="line">  SharedPreferences prefs = await SharedPreferences.getInstance();</span><br><span class="line">  return prefs.getInt(key);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用时</span><br><span class="line">getString(CN_FONT_NAME).then((name) &#123;</span><br><span class="line">  setState(() &#123;</span><br><span class="line">    fontName = null == name ? &apos;kaiTi&apos; : name;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>以上几个功能用的包都是封装了和原生的交互，其实自己实现也未尝不可，但是ios还不会写，所以不如用现成的轮子来的方便，不过设置壁纸这个功能还没有找到符合需要的包，只能自己先写了。</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2019/08/03/Android 6.0适配权限申请/">
+                Android 6.0适配权限申请
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在Android 6.0 (API 23) 发布之前, 所有的权限都在安装应用的时候显示给用户（在清单文件中声明），用户确认安装则表示全部接受这些权限, 之后无法撤销对这些权限的授权.<br>Android 6.0开始, 一部分比较危险的权限需要在程序运行时显式弹框，显式请求用户授权。什么时候弹这个框,由应用程序自己决定.<br>对于其他认为不是很危险的权限，仍然保持原来的做法，在用户安装应用程序时就予以授权。<br>同时在设置中，对于应用的危险权限，用户可以选择性地进行授权或者关闭。</p>
+<h2 id="Permission介绍"><a href="#Permission介绍" class="headerlink" title="Permission介绍"></a>Permission介绍</h2><p><a href="https://developer.android.com/guide/topics/security/permissions.html" target="_blank" rel="noopener">官方文档-系统权限</a><br>所有需要使用的权限都需要在清单文件中声明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    package=&quot;com.android.app.myapp&quot; &gt;</span><br><span class="line">    &lt;uses-permission android:name=&quot;android.permission.RECEIVE_SMS&quot; /&gt;</span><br><span class="line">    ...</span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果您的应用在其清单中列出正常权限（即，不会对用户隐私或设备操作造成很大风险的权限），系统会自动授予这些权限。如果您的应用在其清单中列出危险权限（即，可能影响用户隐私或设备正常操作的权限），系统会要求用户明确授予这些权限。<br>Android 发出请求的方式取决于系统版本，而系统版本是应用的目标：</p>
+<ul>
+<li>如果设备运行的是 <strong>Android 6.0（API 级别 23）</strong>或更高版本，并且应用的 <strong>targetSdkVersion 是 23 或更高</strong>版本，则应用在运行时向用户请求权限。用户可随时调用权限，因此应用在每次运行时均需检查自身是否具备所需的权限。如需了解有关在应用中请求权限的详细信息，请参阅使用系统权限培训指南。</li>
+<li>如果设备运行的是 <strong>Android 5.1（API 级别 22）</strong>或更低版本，并且应用的 <strong>targetSdkVersion 是 22 或更低</strong>版本，则系统会在用户安装应用时要求用户授予权限。如果将新权限添加到更新的应用版本，系统会在用户更新应用时要求授予该权限。用户一旦安装应用，他们撤销权限的唯一方式是卸载应用。</li>
+</ul>
+<p>因此有些app可以通过设置targetSDK为22以下来一次性获取很多权限。</p>
+<h3 id="权限等级"><a href="#权限等级" class="headerlink" title="权限等级"></a>权限等级</h3><p>系统权限分为几个保护级别。需要了解的两个最重要保护级别是正常权限和危险权限：</p>
+<ul>
+<li>正常权限涵盖应用需要访问其沙盒外部数据或资源，但对用户隐私或其他应用操作风险很小的区域。例如，设置时区的权限就是正常权限。如果应用声明其需要正常权限，系统会自动向应用授予该权限。如需当前正常权限的完整列表，请参阅<a href="https://developer.android.com/guide/topics/security/normal-permissions.html" target="_blank" rel="noopener">正常权限</a>。</li>
+<li>危险权限涵盖应用需要涉及用户隐私信息的数据或资源，或者可能对用户存储的数据或其他应用的操作产生影响的区域。例如，能够读取用户的联系人属于危险权限。如果应用声明其需要危险权限，则用户必须明确向应用授予该权限。</li>
+</ul>
+<h3 id="权限组"><a href="#权限组" class="headerlink" title="权限组"></a>权限组</h3><p>所有危险的 Android 系统权限都属于权限组。如果设备运行的是 Android 6.0（API 级别 23），并且应用的 <code>targetSdkVersion</code> 是 23 或更高版本，则当用户请求危险权限时系统会发生以下行为：</p>
+<ul>
+<li>如果应用请求其清单中列出的危险权限，而应用目前在权限组中没有任何权限，则系统会向用户显示一个对话框，描述应用要访问的权限组，系统只告诉用户应用需要的权限组，而不告知具体权限。例如，如果应用请求 <code>READ_CONTACTS</code> 权限，系统对话框只说明该应用需要访问设备的联系信息。如果用户批准，系统将向应用授予其请求的权限。</li>
+<li>如果应用请求其清单中列出的危险权限，而应用在同一权限组中已有另一项危险权限，则系统会立即授予该权限，而无需与用户进行任何交互。例如，如果某应用已经请求并且被授予了 <code>READ_CONTACTS</code> 权限，然后它又请求 <code>WRITE_CONTACTS</code>，系统将立即授予该权限。</li>
+</ul>
+<p>即用户同意权限组中的任意一个权限等同于同意整个权限组。</p>
+<p>危险权限和权限组列表：</p>
+<img src="/2019/08/03/Android%206.0适配权限申请/1555396640039.png">
+<p><a href="https://developer.android.com/reference/android/Manifest.permission.html" target="_blank" rel="noopener">权限列表</a></p>
+<h2 id="动态申请权限"><a href="#动态申请权限" class="headerlink" title="动态申请权限"></a>动态申请权限</h2><p><a href="https://developer.android.com/training/permissions/requesting" target="_blank" rel="noopener">官方文档-申请权限教程</a></p>
+<p>动态申请权限的大致步骤为：判断当前是否拥有该权限-&gt;如果没有则向用户申请权限-&gt;在<code>onRequestPermissionsResult()</code>方法中接收用户是否授予了权限，并进行相应操作。</p>
+<p>检查是否拥有权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// Assume thisActivity is the current activity</span><br><span class="line">int permissionCheck = ContextCompat.checkSelfPermission(thisActivity,</span><br><span class="line">        Manifest.permission.WRITE_CALENDAR);</span><br></pre></td></tr></table></figure>
+
+<p>对于拥有或没有权限做出不同的反应：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// Here, thisActivity is the current activity</span><br><span class="line">if (ContextCompat.checkSelfPermission(thisActivity,</span><br><span class="line">                Manifest.permission.READ_CONTACTS)</span><br><span class="line">        != PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line"></span><br><span class="line">    // Should we show an explanation?</span><br><span class="line">    if (ActivityCompat.shouldShowRequestPermissionRationale(thisActivity,</span><br><span class="line">            Manifest.permission.READ_CONTACTS)) &#123;</span><br><span class="line"></span><br><span class="line">        // Show an expanation to the user *asynchronously* -- don&apos;t block</span><br><span class="line">        // this thread waiting for the user&apos;s response! After the user</span><br><span class="line">        // sees the explanation, try again to request the permission.</span><br><span class="line"></span><br><span class="line">    &#125; else &#123;</span><br><span class="line"></span><br><span class="line">        // No explanation needed, we can request the permission.</span><br><span class="line"></span><br><span class="line">        ActivityCompat.requestPermissions(thisActivity,</span><br><span class="line">                new String[]&#123;Manifest.permission.READ_CONTACTS&#125;,</span><br><span class="line">                MY_PERMISSIONS_REQUEST_READ_CONTACTS);</span><br><span class="line"></span><br><span class="line">        // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an</span><br><span class="line">        // app-defined int constant. The callback method gets the</span><br><span class="line">        // result of the request.</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>onRequestPermissionsResult</code>中接收用户请求的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onRequestPermissionsResult(int requestCode,</span><br><span class="line">        String permissions[], int[] grantResults) &#123;</span><br><span class="line">    switch (requestCode) &#123;</span><br><span class="line">        case MY_PERMISSIONS_REQUEST_READ_CONTACTS: &#123;</span><br><span class="line">            // If request is cancelled, the result arrays are empty.</span><br><span class="line">            if (grantResults.length &gt; 0</span><br><span class="line">                &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line"></span><br><span class="line">                // permission was granted, yay! Do the</span><br><span class="line">                // contacts-related task you need to do.</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line"></span><br><span class="line">                // permission denied, boo! Disable the</span><br><span class="line">                // functionality that depends on this permission.</span><br><span class="line">            &#125;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // other &apos;case&apos; lines to check for other</span><br><span class="line">        // permissions this app might request</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="EasyPermission封装使用"><a href="#EasyPermission封装使用" class="headerlink" title="EasyPermission封装使用"></a>EasyPermission封装使用</h2><p>引入依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    // For developers using AndroidX in their applications</span><br><span class="line">    implementation &apos;pub.devrel:easypermissions:3.0.0&apos;</span><br><span class="line"> </span><br><span class="line">    // For developers using the Android Support Library</span><br><span class="line">    implementation &apos;pub.devrel:easypermissions:2.0.1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>申请权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@AfterPermissionGranted(RC_CAMERA_AND_LOCATION)</span><br><span class="line">private void methodRequiresTwoPermission() &#123;</span><br><span class="line">    String[] perms = &#123;Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION&#125;;</span><br><span class="line">    if (EasyPermissions.hasPermissions(this, perms)) &#123;</span><br><span class="line">        // Already have permission, do the thing</span><br><span class="line">        // ...</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // Do not have permissions, request them now</span><br><span class="line">        EasyPermissions.requestPermissions(this, getString(R.string.camera_and_location_rationale),</span><br><span class="line">                RC_CAMERA_AND_LOCATION, perms);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接收回调方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</span><br><span class="line">    super.onRequestPermissionsResult(requestCode, permissions, grantResults);</span><br><span class="line"></span><br><span class="line">    // Forward results to EasyPermissions</span><br><span class="line">    EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>activity需要实现<code>EasyPermissions.PermissionCallbacks</code>接口，然后实现接口方法处理授予权限和拒绝权限的情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onPermissionsGranted(int requestCode, List&lt;String&gt; list) &#123;</span><br><span class="line">    // Some permissions have been granted</span><br><span class="line">    // ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onPermissionsDenied(int requestCode, List&lt;String&gt; list) &#123;</span><br><span class="line">    // Some permissions have been denied</span><br><span class="line">    // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2019/08/03/Android Template学习笔记/">
+                Android Template学习笔记
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Android Studio的Template，大致可以从复杂程度上分为三种：Live Template，File Template和Activity Template（或Project Template）。</p>
+<h2 id="Live-Template"><a href="#Live-Template" class="headerlink" title="Live Template"></a>Live Template</h2><p>用几个字母+tab展开成一段代码，然后在需要的位置填上自定义内容。</p>
+<p>设置入口：Settings-&gt;Editor-&gt;Live Templates</p>
+<img src="/2019/08/03/Android%20Template学习笔记/1556257637391.png">
+
+
+<p>右侧点击<code>+</code>号之后填写下面的信息，代码中的<code>$name$</code>表示这段代码中可以自定义的部分，在第一个<code>$name$</code>处输入，所有的<code>$name$</code>占位部分都会同时变化。第一处占位符输入完成按<code>enter</code>后会自动跳转到第二处占位符输入下一个变量。<br>代码和缩写字母定义完毕后，一定要选左下角的生效语言范围才会生效，右下角是设置触发的按键（一般是<code>tab</code>）</p>
+<h2 id="File-Template"><a href="#File-Template" class="headerlink" title="File Template"></a>File Template</h2><p>以模板生成文件<br>设置入口：Settings-&gt;Editor-&gt;File Templates</p>
+<img src="/2019/08/03/Android%20Template学习笔记/1556260506611.png">
+<p>点击<code>+</code>创建新模板。编写模板会使用一些占位符语法，在创建文件时自动转换成代码。</p>
+<h3 id="预定义的变量"><a href="#预定义的变量" class="headerlink" title="预定义的变量"></a>预定义的变量</h3><p>预定义的变量可以直接在文件模板中使用：</p>
+<ul>
+<li><code>${PACKAGE_NAME}</code>：新文件被创建的包名</li>
+<li><code>${NAME}</code>：文件名</li>
+<li><code>${USER}</code>：当前用户系统登录的用户名</li>
+<li><code>${DATE}</code>：当前系统日期</li>
+<li><code>${TIME}</code>：当前系统时间</li>
+<li><code>${YEAR}</code>：当前年份</li>
+<li><code>${MONTH}</code>：当前月份</li>
+<li><code>${MONTH_NAME_SHORT}</code>：月份前三个字母。Example: Jan, Feb, etc.</li>
+<li><code>${MONTH_NAME_FULL}</code>：月份全称。 Example: January, February, etc.</li>
+<li><code>${DAY}</code>：current day of the month</li>
+<li><code>${DAY_NAME_SHORT}</code>：first 3 letters of the current day name. Example: Mon, Tue, etc.</li>
+<li><code>${DAY_NAME_FULL}</code>：full name of the current day. Example: Monday, Tuesday, etc.</li>
+<li><code>${HOUR}</code>：当前小时</li>
+<li><code>${MINUTE}</code>：当前分钟</li>
+<li><code>${PROJECT_NAME}</code>：project名</li>
+</ul>
+<h3 id="include其他模板"><a href="#include其他模板" class="headerlink" title="include其他模板"></a>include其他模板</h3><p>使用<code>#parse</code>可以在模板中包括进其他模板的内容，例如通用的文件创建人和创建时间信息，可以放在一个header文件中，在第二个<code>Includes</code>tab中定义：</p>
+<img src="/2019/08/03/Android%20Template学习笔记/1556260386785.png">
+<p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *</span><br><span class="line"> * Created by $&#123;USER&#125; on $&#123;DATE&#125;.</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+
+<p>在使用时就可以在其他模板中使用<code>#parse(&quot;Kt File Header.kt&quot;)</code>引入这个header，生成文件时自动转换成这样的注释代码。</p>
+<h3 id="自定义变量"><a href="#自定义变量" class="headerlink" title="自定义变量"></a>自定义变量</h3><p>除了以上预定义的变量，用<code>${xxx}</code>的格式自定义一些变量名，在创建文件时会同时提示填写这些变量：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">if</span> ($&#123;PACKAGE_NAME&#125; &amp;&amp; $&#123;PACKAGE_NAME&#125; != <span class="string">""</span>)<span class="keyword">package</span> $&#123;PACKAGE_NAME&#125;</span><br><span class="line">#end</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> androidx.room.Entity</span><br><span class="line"></span><br><span class="line">#parse(<span class="string">"Kt File Header.kt"</span>)</span><br><span class="line"><span class="meta">@Entity(tableName = <span class="meta-string">"<span class="subst">$&#123;tableName&#125;</span>s"</span>)</span></span><br><span class="line"><span class="keyword">data</span> <span class="class"><span class="keyword">class</span> $</span>&#123;NAME&#125;(<span class="keyword">var</span> $&#123;props&#125;: String): BaseModel()</span><br></pre></td></tr></table></figure>
+
+<p>在这段代码中自定义了tableName和props两个变量，在新建文件时就会要求填写：</p>
+<img src="/2019/08/03/Android%20Template学习笔记/1556260642277.png">
+<p>最后生成的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">package info.zhufree.windwhite.bean</span><br><span class="line"></span><br><span class="line">import androidx.room.Entity</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> *</span><br><span class="line"> * Created by zhufree on 2019/4/26.</span><br><span class="line"> */</span><br><span class="line">@Entity(tableName = &quot;tests&quot;)</span><br><span class="line">data class TestModel(var title: String) : BaseModel()</span><br></pre></td></tr></table></figure>
+
+<p>以上两种模板在Jetbrain家的其他IDE中也可以使用。</p>
+<h2 id="ActivityTemplate"><a href="#ActivityTemplate" class="headerlink" title="ActivityTemplate"></a>ActivityTemplate</h2><p>最后一种也是最复杂的模板，可以直接生成多个配套文件，典型的例子就是新建Activity，会直接生成一个Activity文件+layout文件，如果是复杂的带Fragment的，带ViewModel的，则会自动生成Fragment以及ViewModel文件等：</p>
+<img src="/2019/08/03/Android%20Template学习笔记/1557459224896.png">
+<p>除了Activity，也可以直接创建Project等等：</p>
+<img src="/2019/08/03/Android%20Template学习笔记/1557459193696.png">
+<p>这种模板不能直接在设置中定义，需要自己编写，放在AndroidStudio的模板文件夹中，重启Studio即可使用。编写模板需要用到<a href="http://freemarker.foofun.cn/" target="_blank" rel="noopener">Free Marker语言</a>。<br>文件夹路径：<br>MacOS：<code>/Applications/Android Studio.app/Contents/plugins/android/lib</code><br>Windows：<code>[Android Studio安装目录]/plugins/android/lib/templates</code></p>
+<p>模板文件夹中不同文件的作用:</p>
+<h3 id="template-xml"><a href="#template-xml" class="headerlink" title="template.xml"></a>template.xml</h3><p>这个文件可以看做定义Activity模板的清单文件，列出在创建Activity时需要填的所有变量，对应这个页面：</p>
+<img src="/2019/08/03/Android%20Template学习笔记/1557820441570.png">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;template</span><br><span class="line">    format=&quot;5&quot;</span><br><span class="line">    revision=&quot;5&quot;</span><br><span class="line">    name=&quot;Empty Activity&quot;</span><br><span class="line">    minApi=&quot;9&quot;</span><br><span class="line">    minBuildApi=&quot;14&quot;</span><br><span class="line">    description=&quot;Creates a new empty activity&quot;&gt;</span><br><span class="line">    &lt;!--定义模板本身的一些属性--&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!--模板类型--&gt;</span><br><span class="line">    &lt;category value=&quot;Activity&quot; /&gt;</span><br><span class="line">    &lt;!--适用于手机，相对的还有平板，TV，可穿戴设备等--&gt;</span><br><span class="line">    &lt;formfactor value=&quot;Mobile&quot; /&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!--parameter标签定义需要填的参数--&gt;</span><br><span class="line">	&lt;!--id 在后面引用时使用--&gt;</span><br><span class="line">	&lt;!--name 解释这个参数意义的名字--&gt;</span><br><span class="line">	&lt;!--type 填的数据类型--&gt;</span><br><span class="line">	&lt;!--constraints 填的内容限制（类名,独一,不可为空）--&gt;</span><br><span class="line">	&lt;!--suggest 在填写其他参数时可以根据其他参数的变化自动填充（根据layoutName进行下划线转驼峰命名生成）--&gt;</span><br><span class="line">	&lt;!--default 默认值--&gt;</span><br><span class="line">	&lt;!--help 显示在左下角的提示文字--&gt;</span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;activityClass&quot;</span><br><span class="line">        name=&quot;Activity Name&quot;</span><br><span class="line">        type=&quot;string&quot;</span><br><span class="line">        constraints=&quot;class|unique|nonempty&quot;</span><br><span class="line">        suggest=&quot;$&#123;layoutToActivity(layoutName)&#125;&quot;</span><br><span class="line">        default=&quot;MainActivity&quot;</span><br><span class="line">        help=&quot;The name of the activity class to create&quot; /&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!--boolean类型显示的是一个勾选框+Name--&gt;</span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;generateLayout&quot;</span><br><span class="line">        name=&quot;Generate Layout File&quot;</span><br><span class="line">        type=&quot;boolean&quot;</span><br><span class="line">        default=&quot;true&quot;</span><br><span class="line">        help=&quot;If true, a layout file will be generated&quot; /&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!--visibility 可见性，这里意思是勾选了上面的generateLayout才会显示填写布局文件名这一行--&gt;</span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;layoutName&quot;</span><br><span class="line">        name=&quot;Layout Name&quot;</span><br><span class="line">        type=&quot;string&quot;</span><br><span class="line">        constraints=&quot;layout|unique|nonempty&quot;</span><br><span class="line">        suggest=&quot;$&#123;activityToLayout(activityClass)&#125;&quot;</span><br><span class="line">        default=&quot;activity_main&quot;</span><br><span class="line">        visibility=&quot;generateLayout&quot;</span><br><span class="line">        help=&quot;The name of the layout to create for the activity&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;isLauncher&quot;</span><br><span class="line">        name=&quot;Launcher Activity&quot;</span><br><span class="line">        type=&quot;boolean&quot;</span><br><span class="line">        default=&quot;false&quot;</span><br><span class="line">        help=&quot;If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;backwardsCompatibility&quot;</span><br><span class="line">        name=&quot;Backwards Compatibility (AppCompat)&quot;</span><br><span class="line">        type=&quot;boolean&quot;</span><br><span class="line">        default=&quot;true&quot;</span><br><span class="line">        help=&quot;If false, this activity base class will be Activity instead of AppCompatActivity&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;packageName&quot;</span><br><span class="line">        name=&quot;Package name&quot;</span><br><span class="line">        type=&quot;string&quot;</span><br><span class="line">        constraints=&quot;package&quot;</span><br><span class="line">        default=&quot;com.mycompany.myapp&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;includeInstantAppUrl&quot;</span><br><span class="line">        name=&quot;Associate a URL with this Activity&quot;</span><br><span class="line">        type=&quot;boolean&quot;</span><br><span class="line">        default=&quot;false&quot;</span><br><span class="line">        visibility=&quot;isInstantApp!false&quot;</span><br><span class="line">        help=&quot;If true, this activity will be associated with URL, improving discovery of your Instant App&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;instantAppActivityHost&quot;</span><br><span class="line">        name=&quot;Instant App URL Host&quot;</span><br><span class="line">        type=&quot;string&quot;</span><br><span class="line">        suggest=&quot;$&#123;companyDomain&#125;&quot;</span><br><span class="line">        default=&quot;instantapp.example.com&quot;</span><br><span class="line">        visibility=&quot;isInstantApp!false&quot;</span><br><span class="line">        enabled=&quot;includeInstantAppUrl&quot;</span><br><span class="line">        help=&quot;The domain to use in the Instant App route for this activity&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;instantAppActivityRouteType&quot;</span><br><span class="line">        name=&quot;Instant App URL Route Type&quot;</span><br><span class="line">        type=&quot;enum&quot;</span><br><span class="line">        default=&quot;pathPattern&quot;</span><br><span class="line">        visibility=&quot;isInstantApp!false&quot;</span><br><span class="line">        enabled=&quot;includeInstantAppUrl&quot;</span><br><span class="line">        help=&quot;The type of route to use in the Instant App route for this activity&quot; &gt;</span><br><span class="line">        &lt;option id=&quot;path&quot;&gt;Path&lt;/option&gt;</span><br><span class="line">        &lt;option id=&quot;pathPrefix&quot;&gt;Path Prefix&lt;/option&gt;</span><br><span class="line">        &lt;option id=&quot;pathPattern&quot;&gt;Path Pattern&lt;/option&gt;</span><br><span class="line">    &lt;/parameter&gt;</span><br><span class="line"></span><br><span class="line">    &lt;parameter</span><br><span class="line">        id=&quot;instantAppActivityRoute&quot;</span><br><span class="line">        name=&quot;Instant App URL Route&quot;</span><br><span class="line">        type=&quot;string&quot;</span><br><span class="line">        default=&quot;/.*&quot;</span><br><span class="line">        visibility=&quot;isInstantApp!false&quot;</span><br><span class="line">        enabled=&quot;includeInstantAppUrl&quot;</span><br><span class="line">        help=&quot;The route to use in the Instant App route for this activity&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 128x128 thumbnails relative to template.xml --&gt;</span><br><span class="line">    &lt;!-- 显示在左边的缩略图 --&gt;</span><br><span class="line">    &lt;thumbs&gt;</span><br><span class="line">        &lt;!-- default thumbnail is required --&gt;</span><br><span class="line">        &lt;thumb&gt;template_blank_activity.png&lt;/thumb&gt;</span><br><span class="line">    &lt;/thumbs&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 声明一些全局定义的global变量 --&gt;</span><br><span class="line">    &lt;globals file=&quot;globals.xml.ftl&quot; /&gt;</span><br><span class="line">    &lt;!-- 执行recipe.xml.ftl文件来生成目标文件 --&gt;</span><br><span class="line">    &lt;execute file=&quot;recipe.xml.ftl&quot; /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在这个页面用户填写的变量值，将和<code>globals.xml.ftl</code>中预定义的全局变量值一起作为可用的变量在后面编写模板代码的过程中使用。</p>
+<h3 id="recipe-xml"><a href="#recipe-xml" class="headerlink" title="recipe.xml"></a>recipe.xml</h3><p>recipe文件中定义以哪个文件为模板来生成哪个文件：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">#import</span> "<span class="attr">root:</span>//<span class="attr">activities</span>/<span class="attr">common</span>/<span class="attr">kotlin_macros.ftl</span>" <span class="attr">as</span> <span class="attr">kt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">recipe</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">#include</span> "<span class="attr">..</span>/<span class="attr">common</span>/<span class="attr">recipe_manifest.xml.ftl</span>" /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">@kt.addAllKotlinDependencies</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 根据generateLayout判断是否要生成layout文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">#if</span> <span class="attr">generateLayout</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 在recipe_simple中处理生成layout文件的逻辑，和下面的instantiate一样 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">#include</span> "<span class="attr">..</span>/<span class="attr">common</span>/<span class="attr">recipe_simple.xml.ftl</span>" /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 文件创建完之后用open打开 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">open</span> <span class="attr">file</span>=<span class="string">"$&#123;escapeXmlAttribute(resOut)&#125;/layout/$&#123;layoutName&#125;.xml"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">#if</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- from 模板文件位置 to 目标文件位置 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">instantiate</span> <span class="attr">from</span>=<span class="string">"root/src/app_package/SimpleActivity.$&#123;ktOrJavaExt&#125;.ftl"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">to</span>=<span class="string">"$&#123;escapeXmlAttribute(srcOut)&#125;/$&#123;activityClass&#125;.$&#123;ktOrJavaExt&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">open</span> <span class="attr">file</span>=<span class="string">"$&#123;escapeXmlAttribute(srcOut)&#125;/$&#123;activityClass&#125;.$&#123;ktOrJavaExt&#125;"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">recipe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上这些文件和png图片都在模板文件夹的根目录下，对于较复杂的模板，<code>root</code>文件夹下分为<code>src</code>和<code>res</code>文件夹，以及清单文件模板<code>AndroidManifest.xml.ftl</code>等等，和真实的项目结构类似，<code>src</code>文件夹中<code>app_package</code>则代表包名路径，之后是<code>activity</code>等类文件的模板，一般有<code>.java.ftl</code>和<code>.kt.ftl</code>两种后缀的，分别对应生成<code>.java</code>文件和<code>.kt</code>文件。<br><code>res</code>文件夹中则可能会有<code>layout/menu/values</code>等文件夹，放置布局，菜单，资源值等类型的模板文件。</p>
+<h3 id="Activity-ftl"><a href="#Activity-ftl" class="headerlink" title="Activity.ftl"></a>Activity.ftl</h3><p><code>src</code>文件夹下的<code>Activity</code>、<code>Fragment</code>等类的模板文件，同理可添加<code>Adapter</code>之类的模板。<br>以最简单的<code>Activity+kotlin</code>语言为例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// 声明包名</span><br><span class="line">package $&#123;escapeKotlinIdentifiers(packageName)&#125;</span><br><span class="line">// 导入一些必要的包，这里的$&#123;superClassFqcn&#125;在common_global.xml.ftl中定义，根据是否是appCompatActivity，是否useAndroidX导入了不同的Activity</span><br><span class="line">import $&#123;superClassFqcn&#125;</span><br><span class="line">import android.os.Bundle</span><br><span class="line">// 判断是否导入布局控件</span><br><span class="line">&lt;#if (includeCppSupport!false) &amp;&amp; generateLayout&gt;</span><br><span class="line">import kotlinx.android.synthetic.main.$&#123;layoutName&#125;.*</span><br><span class="line">&lt;/#if&gt;</span><br><span class="line"></span><br><span class="line">// 定义activity类名，继承父类</span><br><span class="line">class $&#123;activityClass&#125; : $&#123;superClass&#125;() &#123;</span><br><span class="line"></span><br><span class="line">	// 自动生成onCreate方法</span><br><span class="line">    override fun onCreate(savedInstanceState: Bundle?) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState)</span><br><span class="line">		// 如果生成了layout文件，调用setContentView方法</span><br><span class="line">&lt;#if generateLayout&gt;</span><br><span class="line">        setContentView(R.layout.$&#123;layoutName&#125;)</span><br><span class="line">        &lt;#include &quot;../../../../common/jni_code_usage.kt.ftl&quot;&gt;</span><br><span class="line">&lt;#elseif includeCppSupport!false&gt;</span><br><span class="line"></span><br><span class="line">        // Example of a call to a native method</span><br><span class="line">        android.util.Log.d(&quot;$&#123;activityClass&#125;&quot;, stringFromJNI())</span><br><span class="line">&lt;/#if&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;#include &quot;../../../../common/jni_code_snippet.kt.ftl&quot;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>superClassFqcn</code>的定义(<code>common_global.xml.ftl</code>)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;#if !appCompat&gt;</span><br><span class="line">    &lt;global id=&quot;superClass&quot; type=&quot;string&quot; value=&quot;Activity&quot;/&gt;</span><br><span class="line">    &lt;global id=&quot;superClassFqcn&quot; type=&quot;string&quot; value=&quot;android.app.Activity&quot;/&gt;</span><br><span class="line">    &lt;global id=&quot;Support&quot; value=&quot;&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;actionBarClassFqcn&quot; type = &quot;string&quot; value=&quot;android.app.ActionBar&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;kotlinActionBar&quot; type=&quot;string&quot; value=&quot;actionBar&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;kotlinFragmentManager&quot; type=&quot;string&quot; value=&quot;fragmentManager&quot; /&gt;</span><br><span class="line">&lt;#elseif appCompatActivity&gt;</span><br><span class="line">    &lt;global id=&quot;superClass&quot; type=&quot;string&quot; value=&quot;AppCompatActivity&quot;/&gt;</span><br><span class="line">    &lt;global id=&quot;superClassFqcn&quot; type=&quot;string&quot; value=&quot;$&#123;getMaterialComponentName(&apos;android.support.v7.app.AppCompatActivity&apos;, useAndroidX)&#125;&quot;/&gt;</span><br><span class="line">    &lt;global id=&quot;Support&quot; value=&quot;Support&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;actionBarClassFqcn&quot; type = &quot;string&quot; value=&quot;$&#123;getMaterialComponentName(&apos;android.support.v7.app.ActionBar&apos;, useAndroidX)&#125;&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;kotlinActionBar&quot; type=&quot;string&quot; value=&quot;supportActionBar&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;kotlinFragmentManager&quot; type=&quot;string&quot; value=&quot;supportFragmentManager&quot; /&gt;</span><br><span class="line">&lt;#else&gt;</span><br><span class="line">    &lt;global id=&quot;superClass&quot; type=&quot;string&quot; value=&quot;ActionBarActivity&quot;/&gt;</span><br><span class="line">    &lt;global id=&quot;superClassFqcn&quot; type=&quot;string&quot; value=&quot;$&#123;getMaterialComponentName(&apos;android.support.v7.app.ActionBarActivity&apos;, useAndroidX)&#125;&quot;/&gt;</span><br><span class="line">    &lt;global id=&quot;Support&quot; value=&quot;Support&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;actionBarClassFqcn&quot; type = &quot;string&quot; value=&quot;$&#123;getMaterialComponentName(&apos;android.support.v7.app.ActionBar&apos;, useAndroidX)&#125;&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;kotlinActionBar&quot; type=&quot;string&quot; value=&quot;supportActionBar&quot; /&gt;</span><br><span class="line">    &lt;global id=&quot;kotlinFragmentManager&quot; type=&quot;string&quot; value=&quot;supportFragmentManager&quot; /&gt;</span><br><span class="line">&lt;/#if&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="layout-xml-ftl"><a href="#layout-xml-ftl" class="headerlink" title="layout.xml.ftl"></a>layout.xml.ftl</h3><p>作为模板的布局文件在<code>root/res/layout</code>文件夹下，以一个最简单的<code>simple.xml.ftl</code>为例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 判断根布局用哪个版本的ConstraintLayout --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">$&#123;getMaterialComponentName('android.support.constraint.ConstraintLayout',</span> <span class="attr">useAndroidX</span>)&#125;</span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:app</span>=<span class="string">"http://schemas.android.com/apk/res-auto"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line">&lt;#if hasAppBar &amp;&amp; appBarLayoutName??&gt;</span><br><span class="line">app:layout_behavior="@string/appbar_scrolling_view_behavior"</span><br><span class="line">    tools:showIn="@layout/$&#123;appBarLayoutName&#125;"</span><br><span class="line"><span class="tag">&lt;/<span class="name">#if</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--如果有appbar，需要设置behavior--&gt;</span></span><br><span class="line">    tools:context="$&#123;packageName&#125;.$&#123;activityClass&#125;"&gt;</span><br><span class="line"><span class="comment">&lt;!-- 添加一个示例的TextView --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">#if</span> <span class="attr">isNewProject</span>!<span class="attr">false</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line">&lt;#if includeCppSupport!false&gt;</span><br><span class="line">        android:id="@+id/sample_text"</span><br><span class="line"><span class="tag">&lt;/<span class="name">#if</span>&gt;</span></span><br><span class="line">        android:layout_width="wrap_content"</span><br><span class="line">        android:layout_height="wrap_content"</span><br><span class="line">        android:text="Hello World!"</span><br><span class="line">        app:layout_constraintBottom_toBottomOf="parent"</span><br><span class="line">        app:layout_constraintLeft_toLeftOf="parent"</span><br><span class="line">        app:layout_constraintRight_toRightOf="parent"</span><br><span class="line">        app:layout_constraintTop_toTopOf="parent" /&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">#if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">$&#123;getMaterialComponentName('android.support.constraint.ConstraintLayout',</span> <span class="attr">useAndroidX</span>)&#125;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>总体来说，这一类模板结构可能比较复杂，但原理都是根据预定义的变量和自定义的变量，加上事先编写好的模板代码，通过不同的条件判断，填充变量名等操作最终生成目标文件代码。<br>编写模板文件需要了解一些常用的预定义变量和f<code>ree maker</code>语法等，可以参考上面的官方手册。<br>使用<code>Activity</code>和<code>Project</code>层级的模板需要一定的时间成本，属于磨刀不误砍柴工，一旦完成能够节省很多复制粘贴再修改的工作，但需要平衡好模板化和自定义化的程度，编写符合自己需求同时也具有足够复用价值的模板代码。</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2019/08/03/Android Retrofit 学习笔记/">
+                Android Retrofit 学习笔记
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/编程/">编程</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>基于Retrofit2.6+kotlin协程</p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># retrofit</span><br><span class="line">implementation &apos;com.squareup.retrofit2:retrofit:2.6.0&apos;</span><br><span class="line"># gson解析器，可以换成其他的json解析</span><br><span class="line">implementation &apos;com.squareup.retrofit2:converter-gson:2.64.0&apos;</span><br><span class="line"># 与kotlin协程结合，可以换成rxJava+rxAndroid</span><br><span class="line">implementation &apos;com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2&apos;</span><br></pre></td></tr></table></figure>
+
+<h3 id="编写接口"><a href="#编写接口" class="headerlink" title="编写接口"></a>编写接口</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">ArticleApi</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Headers(WindConstants.CONTENT_TYPE_JSON, WindConstants.APP_ID, WindConstants.API_KEY)</span></span><br><span class="line">    <span class="meta">@GET(<span class="meta-string">"1/classes/ArticleModel"</span>)</span></span><br><span class="line">    <span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">getAllArticle</span><span class="params">(<span class="meta">@Query(<span class="meta-string">"skip"</span>)</span> skip: <span class="type">Int</span> = <span class="number">0</span>,</span></span></span><br><span class="line"><span class="function"><span class="params"><span class="comment">//                      @Query("limit") limit: Int = 100,</span></span></span></span><br><span class="line"><span class="function"><span class="params">                              <span class="meta">@Query(<span class="meta-string">"order"</span>)</span> order: <span class="type">String</span> = <span class="string">"-createdAt"</span>)</span></span></span><br><span class="line">            : ApiBean.ApiListResponse&lt;ArticleModel&gt;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Headers(WindConstants.CONTENT_TYPE_JSON, WindConstants.APP_ID, WindConstants.API_KEY)</span></span><br><span class="line">    <span class="meta">@GET(<span class="meta-string">"1/classes/ArticleModel"</span>)</span></span><br><span class="line">    <span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">getArticleOfAuthor</span><span class="params">(<span class="meta">@Query(<span class="meta-string">"where"</span>)</span> <span class="keyword">where</span>: <span class="type">String</span>, <span class="meta">@Query(<span class="meta-string">"order"</span>)</span> order: <span class="type">String</span> = <span class="string">"-createdAt"</span>)</span></span></span><br><span class="line">            : ApiBean.ApiListResponse&lt;ArticleModel&gt;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Headers(WindConstants.CONTENT_TYPE_JSON, WindConstants.APP_ID, WindConstants.API_KEY)</span></span><br><span class="line">    <span class="meta">@POST(<span class="meta-string">"1/classes/ArticleModel"</span>)</span></span><br><span class="line">    <span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">addNewArticle</span><span class="params">(<span class="meta">@Body</span> jsonStr: <span class="type">RequestBody</span>)</span></span>: ApiBean.AddResponse</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取单个model</span></span><br><span class="line">    <span class="meta">@Headers(WindConstants.CONTENT_TYPE_JSON, WindConstants.APP_ID, WindConstants.API_KEY)</span></span><br><span class="line">    <span class="meta">@GET(<span class="meta-string">"1/classes/ArticleModel/&#123;objectId&#125;"</span>)</span></span><br><span class="line">    <span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">getArticle</span><span class="params">(<span class="meta">@Path(<span class="meta-string">"objectId"</span>)</span> objectId: <span class="type">String</span>)</span></span>: ArticleModel</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建retrofit实例"><a href="#创建retrofit实例" class="headerlink" title="创建retrofit实例"></a>创建retrofit实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">object ApiManager &#123;</span><br><span class="line"></span><br><span class="line">    private val retrofit: Retrofit = Retrofit.Builder()</span><br><span class="line">            .baseUrl(PrivateConstants.BMOB_API_URL)</span><br><span class="line">            .addConverterFactory(GsonConverterFactory.create())</span><br><span class="line">            .addCallAdapterFactory(CoroutineCallAdapterFactory.invoke())</span><br><span class="line">            .build()</span><br><span class="line"></span><br><span class="line">    val articleApi = retrofit.create(ArticleApi::class.java)</span><br><span class="line">    val pictureApi = retrofit.create(PictureApi::class.java)</span><br><span class="line">    val userApi = retrofit.create(UserApi::class.java)</span><br><span class="line">    val commentApi = retrofit.create(CommentApi::class.java)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="调用接口方法"><a href="#调用接口方法" class="headerlink" title="调用接口方法"></a>调用接口方法</h3><p>在api的直接方法之外再封装一层，处理返回数据，把需要的数据部分传给回调进行下一步操作，因为kotlin可以使用方法作为参数因此这里可以不用写回调函数了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">suspend fun getAllArticle(next: (List&lt;ArticleModel&gt;) -&gt; Unit) &#123;</span><br><span class="line">    val response = ApiManager.articleApi.getAllArticle()</span><br><span class="line">    next(response.results)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最外层直接调用，可以在UI层，在MVVM架构中应该在Repository层编写一个方法在其中调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fun loadArticleList() &#123;</span><br><span class="line">	// 使用数据库（可选）</span><br><span class="line">    if (articleList == null) &#123;</span><br><span class="line">        articleList = articleDao.loadAll()</span><br><span class="line">    &#125;</span><br><span class="line">    CoroutineScope(Dispatchers.IO).launch &#123;</span><br><span class="line">        ArticleService.getAllArticle &#123; articles -&gt;</span><br><span class="line">	        // 对结果进行数据处理</span><br><span class="line">            articles.forEach &#123; it.lastUpdateTime = System.currentTimeMillis() &#125;</span><br><span class="line">            // 保存结果或进行其他操作</span><br><span class="line">            articleDao.clear()</span><br><span class="line">            articleDao.saveAll(articles)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后在UI层通过viewModel调用该方法。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="基础链接与解析器"><a href="#基础链接与解析器" class="headerlink" title="基础链接与解析器"></a>基础链接与解析器</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">val</span> retrofit: Retrofit = Retrofit.Builder()</span><br><span class="line">    .baseUrl(PrivateConstants.BMOB_API_URL) <span class="comment">// 设置链接</span></span><br><span class="line">    .addConverterFactory(GsonConverterFactory.create()) <span class="comment">// 设置jsonConverter</span></span><br><span class="line">    .addCallAdapterFactory(CoroutineCallAdapterFactory.invoke()) <span class="comment">// 设置把回调转换成kotlin协程</span></span><br><span class="line">    .build()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Header参数"><a href="#Header参数" class="headerlink" title="Header参数"></a>Header参数</h3><h4 id="使用注解-固定参数"><a href="#使用注解-固定参数" class="headerlink" title="使用注解-固定参数"></a>使用注解-固定参数</h4><p>在接口方法上用注解的方式添加header：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Headers(WindConstants.CONTENT_TYPE_JSON, WindConstants.APP_ID, WindConstants.API_KEY)</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const val CONTENT_TYPE_JSON = &quot;Content-Type:application/json&quot;</span><br><span class="line">const val APP_ID = &quot;X-Bmob-Application-Id:$&#123;PrivateConstants.APP_ID&#125;&quot;</span><br><span class="line">const val API_KEY = &quot;X-Bmob-REST-API-Key:$&#123;PrivateConstants.API_KEY&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用注解-可变参数"><a href="#使用注解-可变参数" class="headerlink" title="使用注解-可变参数"></a>使用注解-可变参数</h4><p>使用注解但把header作为方法参数传递：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 更新用户信息</span><br><span class="line">@Headers(WindConstants.CONTENT_TYPE_JSON, WindConstants.APP_ID, WindConstants.API_KEY) // 固定header</span><br><span class="line">@PUT(&quot;1/users/&#123;objectId&#125;&quot;)</span><br><span class="line">suspend fun saveUser(@Header(&quot;X-Bmob-Session-Token&quot;) header: String, // 添加key为X-Bmob-Session-Token的header，value为传递的参数值</span><br><span class="line">@Path(&quot;objectId&quot;) objectId: String,</span><br><span class="line">                     @Body jsonStr: RequestBody):</span><br><span class="line">        ApiBean.UpdateResponse</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用拦截器添加header等参数"><a href="#使用拦截器添加header等参数" class="headerlink" title="使用拦截器添加header等参数"></a>使用拦截器添加header等参数</h4><p>拦截器除了添加header还能对传入的参数进行一系列处理:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">// 定义一个拦截器</span><br><span class="line">private val httpClientBuilder = OkHttpClient.Builder().addInterceptor &#123; chain -&gt; // 拦截器拦截的初始请求</span><br><span class="line">    val paramsMap = baseParamsMap.clone() as HashMap&lt;String, String&gt;</span><br><span class="line"></span><br><span class="line">    val oldRequest = chain.request() // 拿到旧的请求内容</span><br><span class="line">    val oldUrl = oldRequest.url() // 旧的请求链接</span><br><span class="line">    val queryKeys = oldUrl.queryParameterNames() // 获取链接中带的参数</span><br><span class="line">    for ((index, key) in queryKeys.withIndex()) &#123;</span><br><span class="line">        paramsMap[key] = oldUrl.queryParameterValue(index)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	// 在旧的链接上添加新的参数</span><br><span class="line">    val urlBuilder = oldUrl.newBuilder()</span><br><span class="line">        .addQueryParameter(&quot;appId&quot;, AppInfo.instance.appID)</span><br><span class="line">        .addQueryParameter(&quot;appKey&quot;, AppInfo.instance.appKey)</span><br><span class="line">        .addQueryParameter(&quot;deviceId&quot;, EncodeUtil.deviceID)</span><br><span class="line">        .addQueryParameter(&quot;requestId&quot;, requestId)</span><br><span class="line">        .addQueryParameter(&quot;systemVersion&quot;, Build.VERSION.SDK_INT.toString())</span><br><span class="line">        .addQueryParameter(&quot;platformString&quot;, Build.BRAND + &quot; &quot; + Build.MODEL)</span><br><span class="line">        .addQueryParameter(&quot;channelId&quot;, &quot;abcd&quot;)</span><br><span class="line">        .addQueryParameter(&quot;v&quot;, versionCode)</span><br><span class="line"></span><br><span class="line">	// 给旧的请求添加新的链接生成新的请求</span><br><span class="line">    val newRequest = oldRequest.newBuilder()</span><br><span class="line">	    .header(&quot;User-Agent&quot;, &quot;Your-App-Name&quot;) // 自定义添加header</span><br><span class="line">        .header(&quot;Accept&quot;, &quot;application/vnd.yourapi.v1.full+json&quot;)</span><br><span class="line">        .method(oldRequest.method(), oldRequest.body()) // method和body保持原样</span><br><span class="line">        .url(urlBuilder.build())</span><br><span class="line">        .build()</span><br><span class="line"></span><br><span class="line">    if (isDebug) &#123;</span><br><span class="line">        Log.i(&quot;mojulist&quot;, newRequest.url().url().toString())</span><br><span class="line">    &#125;</span><br><span class="line">    chain.proceed(newRequest) // 请求继续</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为Retrofit底层使用的是okhttp，可以自定义一个OkHttpClient，在实例化Retrofit时指定。因此可以通过自定义这个Client来实现自定义api请求。</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2019/08/03/hello-world/">
+                Hello World
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-08-03</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>时隔多年又重新开了自己的个人博客，思考怎么把马克飞象上的一大堆md文件搬过来，而且是不是还需要更新一下，麻烦。</p>
+<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>想退休的工作党/程序猿/百合<br>INFJ，社恐，但网上是个话唠。<br>喜欢ACGN+百合和各种同人文化的宅。<br>喜欢什么都不太狂热，但是都愿意了解。<br>想做个不用愁钱的学生，为早日退休而奋斗。</p>
+<h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><p>目前是一个Android程序员。<br>python web入门，也写过前端和爬虫，目前在使用kotlin挖android坑。<br>不擅长算法及数据结构。<br>对于底层和数据向不太感兴趣，偏爱写应用和工具类型。<br>是个菜鸡，但是写代码很开心。</p>
+<h2 id="Gamer"><a href="#Gamer" class="headerlink" title="Gamer"></a>Gamer</h2><p>Steam和NS玩家。<br>RPG/开放世界/沙盒/解谜/fps和pvp苦手<br>3A：刺客信条/上古卷轴/辐射/巫师/<br>独立：太吾绘卷/饥荒/缺氧/机械迷城/植物精灵/战斗方块剧场<br>独立游戏爱好者，前司indienova.com 日常疑问，我前司为什么还不火</p>
+<h2 id="ACer"><a href="#ACer" class="headerlink" title="ACer"></a>ACer</h2><p>入坑晚，没看过大部分经典作品，国漫日漫一半一半。<br>本命冯宝宝&amp;风灵玉秀<br>伪百合㕑。</p>
+<h2 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a>爱好</h2><p>篮球，以及伪健身爱好者，怕死/希望自己能有肌肉。</p>
+<h2 id="想学但是没有空学的"><a href="#想学但是没有空学的" class="headerlink" title="想学但是没有空学的"></a>想学但是没有空学的</h2><p>画画，剪视频，Vocaloid，电子音乐，树莓派，live2D</p>
+<h2 id="在做的事情"><a href="#在做的事情" class="headerlink" title="在做的事情"></a>在做的事情</h2><p>目前在一家不知名短篇小说平台工作。<br>个人开发并维护一个<a href="http://www.coolapk.com/apk/205561" target="_blank" rel="noopener">SCP基金会</a>的app。<br>以及摸鱼做的小玩具：<br><a href="http://www.coolapk.com/apk/212078" target="_blank" rel="noopener">今天是周五吗</a></p>
+<p>我的<a href="https://afdian.net/@zhufree" target="_blank" rel="noopener">爱发电主页</a></p>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（布局篇）/">简单项目实战flutter（布局篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/简单项目实战flutter（功能篇）/">简单项目实战flutter（功能篇）</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android 6.0适配权限申请/">Android 6.0适配权限申请</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/08/03/Android Template学习笔记/">Android Template学习笔记</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/编程/">编程</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
