@@ -96,26 +96,8 @@
             </li>
             
             <li class="menu-item">
-                <a href="/about.html">
+                <a href="/about/index.html">
                     About
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/tags">
-                    Tags
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/categories">
-                    Categories
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/contact.html">
-                    Contact
                 </a>
             </li>
             
@@ -162,7 +144,7 @@
             
             
                 <span class="category">
-                    <a href="/categories/编程/">编程</a>
+                    <a href="/categories/code/">code</a>
                 </span>
             
         </div>
@@ -241,7 +223,7 @@
             
             
                 <span class="category">
-                    <a href="/categories/编程/">编程</a>
+                    <a href="/categories/code/">code</a>
                 </span>
             
         </div>
@@ -354,7 +336,7 @@
             
             
                 <span class="category">
-                    <a href="/categories/编程/">编程</a>
+                    <a href="/categories/code/">code</a>
                 </span>
             
         </div>
@@ -431,7 +413,7 @@
             
             
                 <span class="category">
-                    <a href="/categories/编程/">编程</a>
+                    <a href="/categories/code/">code</a>
                 </span>
             
         </div>
@@ -529,7 +511,7 @@
             
             
                 <span class="category">
-                    <a href="/categories/编程/">编程</a>
+                    <a href="/categories/code/">code</a>
                 </span>
             
         </div>
@@ -566,41 +548,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">// 定义一个拦截器</span><br><span class="line">private val httpClientBuilder = OkHttpClient.Builder().addInterceptor &#123; chain -&gt; // 拦截器拦截的初始请求</span><br><span class="line">    val paramsMap = baseParamsMap.clone() as HashMap&lt;String, String&gt;</span><br><span class="line"></span><br><span class="line">    val oldRequest = chain.request() // 拿到旧的请求内容</span><br><span class="line">    val oldUrl = oldRequest.url() // 旧的请求链接</span><br><span class="line">    val queryKeys = oldUrl.queryParameterNames() // 获取链接中带的参数</span><br><span class="line">    for ((index, key) in queryKeys.withIndex()) &#123;</span><br><span class="line">        paramsMap[key] = oldUrl.queryParameterValue(index)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	// 在旧的链接上添加新的参数</span><br><span class="line">    val urlBuilder = oldUrl.newBuilder()</span><br><span class="line">        .addQueryParameter(&quot;appId&quot;, AppInfo.instance.appID)</span><br><span class="line">        .addQueryParameter(&quot;appKey&quot;, AppInfo.instance.appKey)</span><br><span class="line">        .addQueryParameter(&quot;deviceId&quot;, EncodeUtil.deviceID)</span><br><span class="line">        .addQueryParameter(&quot;requestId&quot;, requestId)</span><br><span class="line">        .addQueryParameter(&quot;systemVersion&quot;, Build.VERSION.SDK_INT.toString())</span><br><span class="line">        .addQueryParameter(&quot;platformString&quot;, Build.BRAND + &quot; &quot; + Build.MODEL)</span><br><span class="line">        .addQueryParameter(&quot;channelId&quot;, &quot;abcd&quot;)</span><br><span class="line">        .addQueryParameter(&quot;v&quot;, versionCode)</span><br><span class="line"></span><br><span class="line">	// 给旧的请求添加新的链接生成新的请求</span><br><span class="line">    val newRequest = oldRequest.newBuilder()</span><br><span class="line">	    .header(&quot;User-Agent&quot;, &quot;Your-App-Name&quot;) // 自定义添加header</span><br><span class="line">        .header(&quot;Accept&quot;, &quot;application/vnd.yourapi.v1.full+json&quot;)</span><br><span class="line">        .method(oldRequest.method(), oldRequest.body()) // method和body保持原样</span><br><span class="line">        .url(urlBuilder.build())</span><br><span class="line">        .build()</span><br><span class="line"></span><br><span class="line">    if (isDebug) &#123;</span><br><span class="line">        Log.i(&quot;mojulist&quot;, newRequest.url().url().toString())</span><br><span class="line">    &#125;</span><br><span class="line">    chain.proceed(newRequest) // 请求继续</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>因为Retrofit底层使用的是okhttp，可以自定义一个OkHttpClient，在实例化Retrofit时指定。因此可以通过自定义这个Client来实现自定义api请求。</p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2019/08/03/hello-world/">
-                Hello World
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2019-08-03</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>时隔多年又重新开了自己的个人博客，思考怎么把马克飞象上的一大堆md文件搬过来，而且是不是还需要更新一下，麻烦。</p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>想退休的工作党/程序猿/百合<br>INFJ，社恐，但网上是个话唠。<br>喜欢ACGN+百合和各种同人文化的宅。<br>喜欢什么都不太狂热，但是都愿意了解。<br>想做个不用愁钱的学生，为早日退休而奋斗。</p>
-<h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><p>目前是一个Android程序员。<br>python web入门，也写过前端和爬虫，目前在使用kotlin挖android坑。<br>不擅长算法及数据结构。<br>对于底层和数据向不太感兴趣，偏爱写应用和工具类型。<br>是个菜鸡，但是写代码很开心。</p>
-<h2 id="Gamer"><a href="#Gamer" class="headerlink" title="Gamer"></a>Gamer</h2><p>Steam和NS玩家。<br>RPG/开放世界/沙盒/解谜/fps和pvp苦手<br>3A：刺客信条/上古卷轴/辐射/巫师/<br>独立：太吾绘卷/饥荒/缺氧/机械迷城/植物精灵/战斗方块剧场<br>独立游戏爱好者，前司indienova.com 日常疑问，我前司为什么还不火</p>
-<h2 id="ACer"><a href="#ACer" class="headerlink" title="ACer"></a>ACer</h2><p>入坑晚，没看过大部分经典作品，国漫日漫一半一半。<br>本命冯宝宝&amp;风灵玉秀<br>伪百合㕑。</p>
-<h2 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a>爱好</h2><p>篮球，以及伪健身爱好者，怕死/希望自己能有肌肉。</p>
-<h2 id="想学但是没有空学的"><a href="#想学但是没有空学的" class="headerlink" title="想学但是没有空学的"></a>想学但是没有空学的</h2><p>画画，剪视频，Vocaloid，电子音乐，树莓派，live2D</p>
-<h2 id="在做的事情"><a href="#在做的事情" class="headerlink" title="在做的事情"></a>在做的事情</h2><p>目前在一家不知名短篇小说平台工作。<br>个人开发并维护一个<a href="http://www.coolapk.com/apk/205561" target="_blank" rel="noopener">SCP基金会</a>的app。<br>以及摸鱼做的小玩具：<br><a href="http://www.coolapk.com/apk/212078" target="_blank" rel="noopener">今天是周五吗</a></p>
-<p>我的<a href="https://afdian.net/@zhufree" target="_blank" rel="noopener">爱发电主页</a></p>
 
         </div>
     
@@ -662,7 +609,11 @@
     <ul>
         
         <li>
-            <a class="footer-post" href="/categories/编程/">编程</a>
+            <a class="footer-post" href="/categories/memo/">memo</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/code/">code</a>
         </li>
         
     </ul>
