@@ -154,6 +154,7 @@
 
         <!-- Post Content -->
         <h2 id="通过State改变界面"><a href="#通过State改变界面" class="headerlink" title="通过State改变界面"></a>通过State改变界面</h2><p>不同于在原生Android中手动改变控件的属性，Flutter使用State来管理界面状态，使用<code>setState</code>方法改变<code>state</code>将触发页面重绘，达到变化的目的，因此只需要维护一组可以改变的值来控制<code>widget</code>究竟如何显示，而无需去关注<code>widget</code>们本身，以下是一些简单的例子：</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">int langType = 0; // 0 中文 1 英文</span><br><span class="line"></span><br><span class="line">Text(</span><br><span class="line">  today.weekday == 5</span><br><span class="line">    ? langType == 1 ? &quot;YES!&quot; : &quot;是&quot;</span><br><span class="line">    : langType == 1 ? &quot;NO&quot; : &quot;不是&quot;,</span><br><span class="line">  style:</span><br><span class="line">    TextStyle(fontSize: 90, color: textColor, fontFamily: fontName),</span><br><span class="line">),</span><br><span class="line"></span><br><span class="line">String fontName = &quot;kaiTi&quot;; // 字体名</span><br><span class="line">style: TextStyle(color: textColor, fontFamily: fontName),</span><br><span class="line"></span><br><span class="line">Color bgColor; // 背景颜色</span><br><span class="line">Color bubbleColor; // 气泡颜色</span><br><span class="line">Color textColor; // 文字颜色</span><br><span class="line"></span><br><span class="line">decoration: BoxDecoration(</span><br><span class="line">  color: bubbleColor, // 设置气泡（文字的背景）颜色</span><br><span class="line">  borderRadius: BorderRadius.circular(30.0),</span><br><span class="line">),</span><br><span class="line">int screenType = 0; // 全屏/ 正方形</span><br><span class="line"></span><br><span class="line">bool showControlPanel = true; // 是否显示控制面板</span><br><span class="line">showControlPanel ? _buildControlPanel() : Container(),</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -278,11 +279,11 @@
         <ul>
             
             <li>
-                <a class="footer-post" href="/2020/10/08/【傅关】（接番外8）关菡主攻车/">【傅关】（接番外8）关菡主攻车</a>
+                <a class="footer-post" href="/2020/10/08/car1/">【傅关】（接番外8）关菡主攻车</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2020/10/08/【傅关】傅瑜君掉马/">【傅关】傅瑜君掉马</a>
+                <a class="footer-post" href="/2020/10/08/car2/">【傅关】傅瑜君掉马</a>
             </li>
             
             <li>
