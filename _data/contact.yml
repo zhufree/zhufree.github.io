@@ -8,6 +8,9 @@
   icon: "fa-solid fa-book"
   url: 'https://www.gongzicp.com/zone/user-1152167.html'
 
+- type: bilibili
+  icon: "fa-brands fa-bilibili"
+  url: "https://space.bilibili.com/20824925"
 # - type: wordpress
 #   icon: "fa-brands fa-wordpress"
 
